@@ -5,7 +5,7 @@ var util = require('../util');
 var strings = require('../intl/strings').strings;
 
 var getDefaultLocale = exports.getDefaultLocale = function() {
-  return 'en_US';
+  return 'zh_CN';
 };
 
 var getLocale = exports.getLocale = function() {

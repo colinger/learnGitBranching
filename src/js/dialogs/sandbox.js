@@ -113,29 +113,47 @@ exports.dialog = {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 欢迎光临 LearnGitBranching!',
+        '## 欢迎来到GIT的世界',
         '',
-        '本应用旨在帮助初学者领会 git 分支背后的强大概念。',
-        '希望你能喜欢这个应用，并学到知识！',
+        '本应用旨在帮助大家领会 git 分支背后的强大概念。',
         '',
-        '# 演示!',
+        '希望各位能喜欢这个培训，并能够快速掌握GIT的基本命令！',
         '',
-        '如果你还没看过演示，请到此查看：',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?demo](http://pcottle.github.io/learnGitBranching/?demo)',
+        '### 不是有SVN了吗？',
         '',
-        '厌烦这个对话框？ 在 URL 后头加上 `?NODEMO` 就看不到它了，也可以直接点下边这个链接：',
+        '那先来看看GIT与SVN有什么区别',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?NODEMO](http://pcottle.github.io/learnGitBranching/?NODEMO)'
+        '',
+        '',
+        ''
       ]
     }
   }, {
     type: 'ModalAlert',
     options: {
       markdowns: [
+        '## GIT与SVN 有何不同',
+        '',
+        ' * GIT是分布式的，SVN不是',
+        '',
+        ' * GIT把内容按元数据方式存储，而SVN是按文件',
+        '',
+        ' * GIT分支和SVN的分支不同',
+        '',
+        ' * GIT没有一个全局的版本号，而SVN有',
+        '',
+        ' * GIT的内容完整性要优于SVN',
+        ''
+      ]
+    }
+  } , {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
         '## Git 命令',
         '',
-        '在沙盒模式里，你有好多命令可用。 包括：',
+        '这次培训仅仅使用的下面这些命令：',
         '',
         ' * commit',
         ' * branch',
@@ -147,7 +165,27 @@ exports.dialog = {
         ' * merge'
       ]
     }
-  }, {
+  },  {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
+        '## 同时，有好多命令不支持，',
+        '',
+        '如下面这些命令。为什么不支持? 因为，我们主要是讲branch：',
+        '',
+        ' * clone 克隆一个项目',
+        ' * remote 添加remote',
+        ' * add 跟踪文件',
+        ' * fetch 获取远程数据',
+        ' * pull 从远程repo(sitory)中拉数据->合并',
+        ' * push 将数据推到远程的repo(sitory)中',
+        ' * chekcout -b 删除branch',
+        ' * push origin --delete 或者 push origin :<branchName>',
+        ' * tag 打tag',
+        ' * push origin :refs/tags/<tagname> 删除tag'
+      ]
+    }
+  },  {
     type: 'ModalAlert',
     options: {
       markdowns: [
