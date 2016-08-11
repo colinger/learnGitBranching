@@ -20,7 +20,7 @@ exports.level = {
     "ko": "커밋 갖고 놀기 #2",
     "en_US": "Juggling Commits #2",
     "ja": "コミットをやりくりする その2",
-    "zh_CN": "提交交换戏法 #2"
+    "zh_CN": "有趣的提交(commits) #2"
   },
   "hint": {
     "en_US": "Don't forget to forward master to the updated changes!",

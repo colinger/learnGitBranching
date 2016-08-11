@@ -25,7 +25,7 @@ exports.dialog = {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 碉堡了！',
+        '## 恭喜！',
         '',
         '你用 *{numCommands}* 条命令搞定了这一关；我们的答案要用 {best}。'
       ]

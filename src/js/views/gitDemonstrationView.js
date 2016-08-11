@@ -50,7 +50,7 @@ var GitDemonstrationView = ContainedBase.extend({
     this.JSON.afterHTML = convert(this.JSON.afterMarkdowns);
 
     this.container = new ModalTerminal({
-      title: options.title || 'Git Demonstration'
+      title: options.title || 'Git 示例'
     });
     this.render();
     this.checkScroll();

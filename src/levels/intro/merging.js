@@ -271,7 +271,7 @@ exports.level = {
             "afterMarkdowns": [
               "因为 `bugFix` 分支在 `master` 分支的下游，git什么都不用做，只是简单地把`bugfix`分支移动到`master`指向的提交记录。",
               "",
-              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！走起！"
+              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！继续！"
             ],
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit; git merge bugFix"
           }

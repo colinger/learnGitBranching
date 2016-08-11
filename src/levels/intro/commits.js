@@ -231,7 +231,7 @@ exports.level = {
             ],
             "command": "git commit",
             "afterMarkdowns": [
-              "看！碉堡吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
+              "看！好玩吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
             ],
             "beforeCommand": ""
           }

@@ -246,7 +246,7 @@ exports.level = {
             ],
             "command": "git rebase master",
             "afterMarkdowns": [
-              "碉堡吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
+              "好完吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
               "",
               "注意，提交记录 C3 仍然存在（阴影的那货就是你了，还看什么看），而我们已经将 C3 复制到了master。",
               "",

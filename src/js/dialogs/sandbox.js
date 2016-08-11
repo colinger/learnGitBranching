@@ -179,7 +179,7 @@ exports.dialog = {
         ' * fetch 获取远程数据',
         ' * pull 从远程repo(sitory)中拉数据->合并',
         ' * push 将数据推到远程的repo(sitory)中',
-        ' * chekcout -b 删除branch',
+        ' * branch -d 删除branch',
         ' * push origin --delete 或者 push origin :<branchName>',
         ' * tag 打tag',
         ' * push origin :refs/tags/<tagname> 删除tag'
@@ -189,12 +189,7 @@ exports.dialog = {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 分享即关怀',
-        '',
-        '使用 `export tree` 和 `import tree` 与朋友分享 Git 树',
-        '',
-        '有个好课程可以分享？试试用 `build level` 创建一个关卡，或者 `import level` 试试朋友的。',
-        '',
+        '## Welcome to Git World!',
         '言归正传，让我们先从 `levels` 开始……'
       ]
     }

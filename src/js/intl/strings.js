@@ -4,7 +4,7 @@ exports.strings = {
     '__desc__': 'One of the lines in the next level dialog',
     'ja': '最後のレベルをクリアしました！すごい！！',
     'en_US': 'Wow! You finished the last level, great!',
-    'zh_CN': '我的个天！你完成了最后一关，碉堡了！',
+    'zh_CN': '我的天呀！你完成了最后一关，太帅了！',
     'fr_FR': 'Félicitations, vous avez réussi le dernier niveau !'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -12,7 +12,7 @@ exports.strings = {
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Would you like to move on to *"{nextLevel}"*, the next level?',
     'ja': '次の章 *"{nextLevel}"* へ進みますか？',
-    'zh_CN': '要不前进到下一关 *“{nextLevel}”*？',
+    'zh_CN': '要不前进到下一关 *"{nextLevel}"* ？',
     'fr_FR': 'Voulez-vous passer à *"{nextLevel}"*, le prochain niveau ?'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -20,7 +20,7 @@ exports.strings = {
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Awesome! You matched or exceeded our solution.',
     'ja': '素晴らしい！このレベルをクリアしましたね。',
-    'zh_CN': '牛鼻啊！你达到或者完爆了我们的答案。',
+    'zh_CN': '我的天呀！你竞然答对了！',
     'fr_FR': 'Fabuleux ! Votre solution a égalé ou surpassé notre solution.'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -82,7 +82,7 @@ exports.strings = {
     '__desc__': 'The dummy commit message for all commits. Feel free to put in a ' +
       'shoutout to your school / city / whatever!',
     'en_US': 'Quick commit. Go Bears!',
-    'zh_CN': '快速提交。上啊月熊！',
+    'zh_CN': '快速提交。上啊！',
     'fr_FR': 'Commit rapide. NoMaN Sux!'
   },
   'git-error-origin-fetch-uptodate': {
@@ -141,7 +141,7 @@ exports.strings = {
   'git-result-nothing': {
     '__desc__': 'The message that explains the result of a git command',
     'en_US': 'Nothing to do...',
-    'zh_CN': '没啥鸟事……',
+    'zh_CN': '没啥鸟事了……',
     'fr_FR': 'Rien à effectuer…'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -263,7 +263,7 @@ exports.strings = {
     'en_US': 'Learn Git Branching',
     'ja': '日本語版リポジトリ',
     'ko': 'Git 브랜치 배우기',
-    'zh_CN': '学习Git分支',
+    'zh_CN': 'Git Branch课程分享 - 同程',
     'fr_FR': 'Apprenez Git Branching'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -504,7 +504,8 @@ exports.strings = {
   ///////////////////////////////////////////////////////////////////////////
   'goal-only-master': {
     '__desc__': 'the helper message for the window that shows the goal tree when the goal will only be compared using the master branch',
-    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"'
+    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"',
+    'zh_CN': '<span class="fwber">注意:</span> 本关卡，在master分支上操作的. 其他分支只是作为简单引用。 如果想关闭目标面板，输入"hide goal"'
   },
   ///////////////////////////////////////////////////////////////////////////
   'hide-goal': {

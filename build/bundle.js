@@ -3253,7 +3253,7 @@ var util = require('../util');
 var strings = require('../intl/strings').strings;
 
 var getDefaultLocale = exports.getDefaultLocale = function() {
-  return 'en_US';
+  return 'zh_CN';
 };
 
 var getLocale = exports.getLocale = function() {
@@ -3363,7 +3363,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'ja': '最後のレベルをクリアしました！すごい！！',
     'en_US': 'Wow! You finished the last level, great!',
-    'zh_CN': '我的个天！你完成了最后一关，碉堡了！',
+    'zh_CN': '我的天呀！你完成了最后一关，太帅了！',
     'fr_FR': 'Félicitations, vous avez réussi le dernier niveau !'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -3371,7 +3371,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Would you like to move on to *"{nextLevel}"*, the next level?',
     'ja': '次の章 *"{nextLevel}"* へ進みますか？',
-    'zh_CN': '要不前进到下一关 *“{nextLevel}”*？',
+    'zh_CN': '要不前进到下一关 *"{nextLevel}"* ？',
     'fr_FR': 'Voulez-vous passer à *"{nextLevel}"*, le prochain niveau ?'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -3379,7 +3379,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Awesome! You matched or exceeded our solution.',
     'ja': '素晴らしい！このレベルをクリアしましたね。',
-    'zh_CN': '牛鼻啊！你达到或者完爆了我们的答案。',
+    'zh_CN': '我的天呀！你竞然答对了！',
     'fr_FR': 'Fabuleux ! Votre solution a égalé ou surpassé notre solution.'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -3441,7 +3441,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'The dummy commit message for all commits. Feel free to put in a ' +
       'shoutout to your school / city / whatever!',
     'en_US': 'Quick commit. Go Bears!',
-    'zh_CN': '快速提交。上啊月熊！',
+    'zh_CN': '快速提交。上啊！',
     'fr_FR': 'Commit rapide. NoMaN Sux!'
   },
   'git-error-origin-fetch-uptodate': {
@@ -3500,7 +3500,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   'git-result-nothing': {
     '__desc__': 'The message that explains the result of a git command',
     'en_US': 'Nothing to do...',
-    'zh_CN': '没啥鸟事……',
+    'zh_CN': '没啥鸟事了……',
     'fr_FR': 'Rien à effectuer…'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -3622,7 +3622,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     'en_US': 'Learn Git Branching',
     'ja': '日本語版リポジトリ',
     'ko': 'Git 브랜치 배우기',
-    'zh_CN': '学习Git分支',
+    'zh_CN': 'Git Branch课程分享 - 同程',
     'fr_FR': 'Apprenez Git Branching'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -3863,7 +3863,8 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   ///////////////////////////////////////////////////////////////////////////
   'goal-only-master': {
     '__desc__': 'the helper message for the window that shows the goal tree when the goal will only be compared using the master branch',
-    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"'
+    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"',
+    'zh_CN': '<span class="fwber">注意:</span> 本关卡，在master分支上操作的. 其他分支只是作为简单引用。 如果想关闭目标面板，输入"hide goal"'
   },
   ///////////////////////////////////////////////////////////////////////////
   'hide-goal': {
@@ -14811,7 +14812,7 @@ require.define("/src/js/dialogs/nextLevel.js",function(require,module,exports,__
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 碉堡了！',
+        '## 恭喜！',
         '',
         '你用 *{numCommands}* 条命令搞定了这一关；我们的答案要用 {best}。'
       ]
@@ -16124,7 +16125,7 @@ var GitDemonstrationView = ContainedBase.extend({
     this.JSON.afterHTML = convert(this.JSON.afterMarkdowns);
 
     this.container = new ModalTerminal({
-      title: options.title || 'Git Demonstration'
+      title: options.title || 'Git 示例'
     });
     this.render();
     this.checkScroll();
@@ -19724,7 +19725,7 @@ require.define("/levels/intro/commits.js",function(require,module,exports,__dirn
             ],
             "command": "git commit",
             "afterMarkdowns": [
-              "看！碉堡吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
+              "看！好玩吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
             ],
             "beforeCommand": ""
           }
@@ -20433,7 +20434,7 @@ require.define("/levels/intro/merging.js",function(require,module,exports,__dirn
             "afterMarkdowns": [
               "因为 `bugFix` 分支在 `master` 分支的下游，git什么都不用做，只是简单地把`bugfix`分支移动到`master`指向的提交记录。",
               "",
-              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！走起！"
+              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！继续！"
             ],
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit; git merge bugFix"
           }
@@ -20779,7 +20780,7 @@ require.define("/levels/intro/rebasing.js",function(require,module,exports,__dir
             ],
             "command": "git rebase master",
             "afterMarkdowns": [
-              "碉堡吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
+              "好完吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
               "",
               "注意，提交记录 C3 仍然存在（阴影的那货就是你了，还看什么看），而我们已经将 C3 复制到了master。",
               "",
@@ -21707,10 +21708,30 @@ require.define("/levels/rampup/cherryPick.js",function(require,module,exports,__
   },
   "startTree": "{\"branches\":{\"master\":{\"target\":\"C1\",\"id\":\"master\"},\"bugFix\":{\"target\":\"C3\",\"id\":\"bugFix\"},\"side\":{\"target\":\"C5\",\"id\":\"side\"},\"another\":{\"target\":\"C7\",\"id\":\"another\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"},\"C2\":{\"parents\":[\"C1\"],\"id\":\"C2\"},\"C3\":{\"parents\":[\"C2\"],\"id\":\"C3\"},\"C4\":{\"parents\":[\"C1\"],\"id\":\"C4\"},\"C5\":{\"parents\":[\"C4\"],\"id\":\"C5\"},\"C6\":{\"parents\":[\"C1\"],\"id\":\"C6\"},\"C7\":{\"parents\":[\"C6\"],\"id\":\"C7\"}},\"HEAD\":{\"target\":\"master\",\"id\":\"HEAD\"}}",
   "name": {
-    "en_US": "Cherry-pick Intro"
+    "fr_FR": "Introduction à cherry-pick",
+    "en_US": "Cherry-pick Intro",
+    "de_DE": "Einführung Cherry-picking",
+    "ja"   : "cherry-pick入門",
+    "es_AR": "Introducción a cherry-pick",
+    "pt_BR": "Introdução ao cherry-pick",
+    "zh_CN": "介绍 Cherry-pick",
+    "zh_TW": "介紹 cherry-pick",
+    "ru_RU": "Введение в Cherry-pick",
+    "ko"   : "Cherry-pick 소개",
+    "uk": "Знайомство з cherry-pick"
   },
   "hint": {
-    "en_US": "git cherry-pick followed by commit names!"
+    "fr_FR": "git cherry-pick suivis par les noms de commits",
+    "en_US": "git cherry-pick followed by commit names!",
+    "de_DE": "git cherry-pick gefolgt von Commit-Namen.",
+    "ja"   : "git cherry-pickの後にコミット名を追加",
+    "es_AR": "git cherry-pick seguido de los nombres de los commits",
+    "pt_BR": "git cherry-pick seguido dos nomes dos commits",
+    "zh_CN": "git cherry-pick 后面跟着 commit 的名字",
+    "zh_TW": "git cherry-pick 後面要接著 commit 的名稱",
+    "ru_RU": "git cherry-pick основывается на именах коммитов!",
+    "ko"   : "커밋의 이름들로 git cherry-pick 하세요!",
+    "uk": "git cherry-pick базується на іменах комітів!"
   },
   "startDialog": {
     "en_US": {
@@ -21723,7 +21744,7 @@ require.define("/levels/rampup/cherryPick.js",function(require,module,exports,__
               "",
               "So far we've covered the basics of git -- committing, branching, and moving around in the source tree. Just these concepts are enough to leverage 90% of the power of git repositories and cover the main needs of developers.",
               "",
-              "That remaining 10%, however, can be quite useful during complex workflows (or when you've gotten yourself into a bind). The next concept we're going to cover is \"moving work around\" -- in other words, its a way for developers to say \"I want this work here and that work here\" in precise, eloquent, flexible ways.",
+              "That remaining 10%, however, can be quite useful during complex workflows (or when you've gotten yourself into a bind). The next concept we're going to cover is \"moving work around\" -- in other words, it's a way for developers to say \"I want this work here and that work there\" in precise, eloquent, flexible ways.",
               "",
               "This may seem like a lot, but it's a simple concept."
             ]
@@ -21769,25 +21790,612 @@ require.define("/levels/rampup/cherryPick.js",function(require,module,exports,__
           }
         }
       ]
+    },
+    "fr_FR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Déplacer votre travail",
+              "",
+              "Nous avons maintenant pratiqué les bases de git -- commits, branches, et déplacements dans l'arbre des commits. Ces seuls concepts sont suffisants pour utiliser 90% du pouvoir des dépôt git et satisfaire les principaux besoins des développeurs.",
+              "",
+              "Les 10% restants, cependant, peuvent être assez utiles pour systèmes assez complexes (ou quand vous vous êtes mis tout seul dans le pétrin). Le prochain concept que nous allons aborder est \"le déplacement de travail\" (moving work around) -- en d'autres termes, c'est une façon des développeurs de dire  \"Je veux ce travail ici et cet autre là.\".",
+              "",
+              "Cela peut sembler compliqué, mais c'est un concept simple."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "La première commande de cette série est `git cherry-pick`. Elle a le prototype suivant :",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "C'est une manière simple de dire qu'on voudrait copier une série de commits en-dessous de notre emplacement actuel (`HEAD`). Personnellement, j'adore `cherry-pick` parce qu'il y a un petit peu de magie dedans, et parce que c'est facile à comprendre.",
+              "",
+              "Faisons une démonstration !",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Ici le dépôt que nous avons contient du travail dans la branche `side`, que nous voulons copier dans `master`. Cela pourrait être fait avec un rebase (que nous avons déjà appris), mais voyons comment cherry-pick fonctionne."
+            ],
+            "afterMarkdowns": [
+              "Voilà ! Nous voulions les commits `C2` et `C4` et git les a fait apparaître juste sous nos jambes. Aussi simple que ça !"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Pour finir ce niveau, copiez simplement le travail désigné dans la branche master. Vous pouvez voir les commits que nous souhaitons avoir en regardant dans la fenêtre d'objectif.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "es_AR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Moviendo el trabajo por ahí",
+              "",
+              "Hasta ahora cubrimos lo básico de git -- commitear, branchear, y movernos por el árbol de commits. Estos conceptos alcanzan para aprovechar el 90% del poder de los repositorios de git y cubrir las necesidades principales de los desarrolladores.",
+              "",
+              "El 10% restante, sin embargo, puede ser bastante útil en flujos de trabajo complejos (o cuando te metiste en algún problema complicado). El próximo concepto que vamos a cubrir es el de \"mover el trabajo por ahí\" -- en otras palabras, una forma que tienen los desarrolladores de decir \"Quiero este trabajo allá y este otro allá\" de una manera precisa, elocuente y flexible.",
+              "",
+              "Puede parecer un montón, pero es un concepto bastante simple."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "El primer comando en esta serie se llama `git cherry-pick`. Tiene la siguiente forma:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Es una manera bastante directa de decir que querés copiar una serie de commits sobre tu ubicación actual (`HEAD`). Personalmente amo `cherry-pick` porque hay muy poca magia involucrada y es bastante simple de entender.",
+              "",
+              "¡Veamos una demo!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Acá tenemos un repositorio con algo de trabajo en la rama `side` que queremos copiar a `master`. Podríamos lograrlo con un rebase (y ya aprendimos cómo), pero veamos cómo se comporta cherry-pick."
+            ],
+            "afterMarkdowns": [
+              "¡Eso es todo! Queríamos los commits `C2` y `C4` y git los aplicó justo donde estábamos. ¡Tan simple como eso!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar este nivel, simplemente copiá algo de trabajo desde otras tres ramas a master. Podés ver qué commits queremos en la visualización del objetivo.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "pt_BR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Movendo trabalho por aí",
+              "",
+              "Por enquanto nós abordamos o básico do Git -- commitar, criar ramos, e mover-se pela árvore. Apenas esses conceitos já são suficientes para utilizar 90% do poder dos repositórios Git, e cobrem as principais necessidades dos desenvolvedores.",
+              "",
+              "Os 10% restantes, entretanto, podem ser extremamente úteis em fluxos de trabalho complexos (ou quando você estiver em uma enrascada). O próximo conceito que vamos abordar é \"movendo trabalho por aí\" -- em outras palavras, veremos as formas como o desenvolvedor pode dizer \"eu quero este trabalho aqui, e aquele ali\" de formas precisas, eloquentes e flexíveis.",
+              "",
+              "Isso pode parecer muito, mas os conceitos são simples."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "O primeiro comando desta série é o `git cherry-pick`. Ele é chamado da seguinte forma:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Trata-se de uma forma bastante direta de dizer que você gostaria de copiar uma série de commits abaixo do seu local atual (`HEAD`). Eu pessoalmente amo o  `cherry-pick` porque há muito pouca mágica envolvida e é fácil de entender o funcionamento.",
+              "",
+              "Vejamos uma demonstração!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Aqui está um repositório onde temos algum trabalho no ramo `side` que desejamos copiar para o `master`. Isso poderia ser obtido por meio de um rebase (que já aprendemos), mas vamos ver como o cherry-pick se sai."
+            ],
+            "afterMarkdowns": [
+              "É isso! Queríamos os commits `C2` e `C4` e o git os inseriu logo abaixo de nós. Simples assim!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar este nível, simplesmente copie algum trabalho dos outros três ramos para o master. Você pode ver quais commits queremos copiar na visualização do objetivo.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "zh_TW": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "移動 commit",
+              "",
+              "目前為止我們已經講了 git 的基礎，這些基礎包括 commit、branch 以及在 commit tree 中移動，只要有這些概念你就能發揮 git 90% 的功力，而且對於程式設計師來說，這樣就很夠了。",
+              "",
+              "而剩下的 10%，在很複雜的專案上面，是非常有用的（或者當你陷入困惑時），我們下一個要講的概念是 \"移動 commit\"，換句話說，當你會這個非常有彈性的招數之後，你就可以說\"我想要把這個 commit 放這裡，而那個 commit 放在那裡\"。",
+              "",
+              "這看起來很複雜，但其實它很簡單。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git cherry-pick",
+              "",
+              "我們要講的第一個指令叫作 `git cherry-pick`，它的用法如下：",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "當你想要複製幾個 commit 並且接在你目前的位置（`HEAD`）下面的時候，這會是一個非常直接的方式。我個人非常喜歡用 `cherry-pick`，因為它並不複雜，很容易就可以了解。",
+              "",
+              "讓我們來看一個例子！",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "這裡有一個 repo，在 `side` branch 中，我們有一些 commit 想要複製到 `master` branch 上，這可以透過一個 rebase 來完成（我們之前已經學到了），但是讓我們看看 `git cherry-pick` 怎麼做。"
+            ],
+            "afterMarkdowns": [
+              "就是那樣！我們複製了 `C2` 以及 `C4` 並且把它們放到我們的後面，很簡單吧！"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成這個關卡，只需要從三個 branch 複製幾個 commit 到 `master` 下面，你可以從視覺化的目標看到我們需要哪些 commit。",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "zh_CN": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 转移提交(commits)",
+              "",
+              "到现在我们已经学习了 Git 的基础命令 -- commit, branch, checkout. 这些概念实现了 Git 90% 的功能, 同样也满足了开发者的主要需求 ",
+              "",
+              "然而, 剩余的 10% 可能在处理复杂的工作流时(或者当你陷入困惑时), 非常的重要. 我们会在下一个概念中涉及'转移工作区', 换句话说, 这是开发者表达'我想要把这个工作放这里, 那个工作也放这里', 精确地说, 这是很灵活的方式    ",
+              "",
+              "看起来内容很多, 其实概念相当简单"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "本系列的第一个命令是 `git cherry-pick`, 命令形式为: ",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "这是一种很直接的推进方式 -- 如果你想将一些提交复制到你当前的位置 `HEAD` 下面, 我个人喜欢 `cherry-pick` 的原因是, 其概念非常简单 ",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "现在有一个仓库, 我们想将 `side` 分支下的工作复制到 `master` 分支, 我们可以通过 `rebase` 完成这一点(已经学过了哈), 但是这里我们想通过 `cherry-pick` 来完成."
+            ],
+            "afterMarkdowns": [
+              "这是它啦, 我们需要的是提交对象`C2` 和 `C4` ,所以 Git 将被它们抓取到当前分支下了. 就是这么简单!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "完成这节测试, 只需要简单的将分支的工作复制到 master.  如果想看我们所需要的提交对象, 你可以打开虚拟目标窗口 (`show goal`)",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "de_DE": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Inhalte verschieben",
+              "",
+              "Bis jetzt haben wir uns die Grundlagen von Git angeschaut -- comitten, verzweigen und sich im Commit-Baum bewegen. Nur damit lässt sich schon 90% der Macht von Git-Repositories nutzen und die meisten Anforderungen von Entwicklern erfüllen.",
+              "",
+              "Die übrigen 10% jedoch können in komplexeren Abläufen sehr hilfreich sein (oder wenn man sich in eine schwierige Lage manövriert hat). Das nächste was wir uns anschauen, ist, Inhalte durch den Commit-Baum zu schieben. Es gibt dem Entwickler die Möglichkeit in präziser, eloquenter Manier zu sagen \"Ich will diese Inhalte hier und diese dort haben\".",
+              "",
+              "Das klingt vielleicht nach einer Menge, aber es ist sehr einfach."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git cherry-pick",
+              "",
+              "Der erste Befehl in dieser Serie ist `git cherry-pick`. Er sieht so aus:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Er ist eine einfache Möglichkeit um auszudrücken, dass du eine Folge von Commits unter deinen aktuellen Checkout (also `HEAD`) hängen möchtest. Ich persönlich liebe `cherry-pick`, weil es wenig Magic enthält und einfach zu verstehen ist.",
+              "",
+              "Schauen wir's uns mal an.",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Hier haben wir ein Repository mit einigem Zeugs im Branch `side`, das wir in den Branch `master` kopieren wollen. Das könnten wir mit einem Rebase machen (wie bereits gesehen), aber schauen wir mal wie das mit `cherry-pick` geht."
+            ],
+            "afterMarkdowns": [
+              "Das war's! Wir wollten die commits `C2` und `C4` und Git hat die einfach unter unseren aktuellen Checkout kopiert. So einfach ist das."
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Um diesen Level zu schaffen musst du einfach nur einige Commits aus den drei gezeigten Branches in den `master` kopieren. Der Zielbaum zeigt dir, welche.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "ja": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## コードの移動",
+              "",
+              "今まででは、gitの基本をひたすら見てきました -- コミットしたりブランチを派生したり、そしてソースツリーの中の色々な場所に移動することなどです。これらの概念だけで、gitリポジトリの力を90%使いこなすことができ、開発者の主な需要を満たしています。",
+              "",
+              "しかし最後の10%はより複雑なワークフローやちょっとトラブった時にとても役にたちます。これから取り上げる次の課題は「作業内容の移動」 –- 詳しく言えば、「この作業はここに置き、その作業はそこに置きたい」と言う開発者のために、優しく具体的で正確にその方法をお教えしましょう。",
+              "",
+              "ちょっと複雑に聞こえるかもしれませんが、概念は簡単です。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "このシリーズの一つ目のコマンドは、`git cherry-pick`。このコマンドの使い方は、次の形になります:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "現在の位置(`HEAD`)の下に一連のコミットをコピーしたいという意を単純に表す方法です。分かりにくいところが少ないので、個人的に私がとても好きなコマンドです。",
+              "",
+              "デモを見ていきましょう!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "このリポジトリには、現在`side`ブランチから`master`にコピーしたいコードがあります。この前に学んだrebaseコマンドでも実現可能ですが、ここではcherry-pickの動作を見ていきましょう。"
+            ],
+            "afterMarkdowns": [
+              "これだけで終わりです！コミット`C2` と `C4`を取得したかったわけですが、gitが現在の位置の直下に落としてくれました。単純ですね！"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "このレベルをクリアするには、３つのブランチからmasterにコードをコピーしてください。どのコミットを取得するかについてはゴールのツリーをみてください。",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "ru_RU": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Поперемещаем изменения",
+              "",
+              "Итак, мы уже освоили основы Git: коммиты, ветки, перемещение по дереву изменений. Уже этих знаний достаточно, чтобы овладеть 90% мощью Git-репозиториев и покрыть нужды разработчиков.",
+              "",
+              "А оставшиеся 10% будут очень полезны при сложных workflow (или если ты попал в сложную ситуацию). Теперь речь пойдёт о перемещении изменений — возможности, позволяющей разработчику сказать \"Хочу, чтобы эти изменения были вот тут, а вот эти — вон там\" и получить точные, правильные результаты, не теряя при этом гибкости разработки.",
+              "",
+              "На первый взгляд запутанно, но на самом деле всё просто."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "Первая из таких команд - это `git cherry-pick`. Она выглядит вот так:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Это очень простой и прямолинейный способ сказать, что ты хочешь копировать несколько коммитов на место, где сейчас находишься (`HEAD`). Мы обожаем `cherry-pick` за то, что в нём очень мало магии и его очень просто понять и применять.",
+              "",
+              "Посмотрим на демонстрацию.",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Вот репозиторий, где есть некие изменения в ветке `side`, которые мы хотим применить и в ветку `master`. Мы можем сделать это при помощи команды rebase, которую мы уже прошли, но давай посмотрим, как cherry-pick справится с этой задачей."
+            ],
+            "afterMarkdowns": [
+              "Вуаля! Мы хотели перенести коммиты `C2` и `C4`, Git дал нам их там, где они нужны. Всё просто!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Чтобы пройти этот уровень, просто скопируй изменения из этих трёх веток в мастер. Чтобы понять, какие коммиты копировать, посмотри на визуализацию уровня.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+  "ko": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 작업을 여기저기로 옮기기",
+              "",
+              "지금까지 우리는 git의 기초를 배웠습니다. -- 커밋을하고, 브랜치를 만들고, 소스 트리 여기저기를 돌아다녔습니다. 이런 개념들을 아는 것만으로도 git repository의 힘을 90%이상 사용하고 개발자들이 필요로하는 작업의 대부분을 할 수 있습니다.",
+              "",
+              "그 나머지 10% 기능이, 복잡한 작업(또는 작업중 막혔을때)중에 꽤 유용할 수 있습니다. 이제 배워 볼 다음 개념은 \"작업을 여기저로 올기기\" 다시 말해, 개발자들의 언어로 \"이 일은 여기에 저 일은 저기에 두고 싶어\" 정확하고 우아하고 유연하게.",
+              "",
+              "다소 과해 보일 수 있는데, 간단한 개념입니다."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git 체리-픽 (Cherry-pick)",
+              "",
+              "이 시리즈의 첫 명령어는 `git cherry-pick` 입니다. 다음 과 같은 형태로 사용합니다:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "현재 위치(`HEAD`) 아래에 있는 일련의 커밋들에대한 복사본을 만들겠다는 것을 간단히 줄인 말입니다. 개인적으로 저는 `cherry-pick`을 아주 좋아합니다 왜냐하면 조금의 마법이 첨가되있고 이해하기 쉽기 때문입니다.",
+              "",
+              "데모를 확인해봅시다",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "여기 repository가 있습니다. `master`와 master로 복사하고 싶은 작업이 있는 브랜치 `side`가 있습니다. 이것은 rebase를 통해서 할 수 있습니다(이미 배운), 하지만 체리-픽이 이 작업을 어떻게 수행하는지 확인해 봅시다."
+            ],
+            "afterMarkdowns": [
+              "됬습니다! 우리는 `C2`와 `C4` 커밋을 원했고 git이 우리가 원하는 곳 바로 밑에 톡 떨어뜨려 줬습니다. 아주 간단하죠!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "이 레벨을 통과하기 위해서는 몇개의 작업을 세개의 브랜치들에서 master로 복사해와야합니다. 어떤 커밋들이 필요한지는 goal을 보고 확인하면 됩니다.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "uk": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Переміщуємо зміни",
+              "",
+              "Поки що ми розглядали основи git -- як працювати з комітами та гілками й переміщення по дереву комітів. Цього вже достатньо щоб використовувати 90% фунцкій гіт та мати змогу ефективно працювати з гіт як розробник.",
+              "",
+              "Решта 10%, тим не менш, можуть бути надзвичайно корисними при роботі зі складними робочими процесами (workflow), чи коли ти чи ще хтось щось зробили не так і ти хочеш це виправити. Наступна концепція з якою ми познайомимось це \"перенесення змін\" -- іншими словами, це можливість розробника переміщувати коміти між гілками в простий та зручний спосіб.",
+              "",
+              "Це може видаватися складним, але насправді це дуже проста концепція."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "Перша команда в цій серії називається `git cherry-pick`. Вона має наступну форму:",
+              "",
+              "* `git cherry-pick <Коміт1> <Коміт2> <...>`",
+              "",
+              "Це надзвичайно простий спосіб вказати гіту що потрібно скопіювати серію комітів до поточного розташування (`HEAD`). Персонально я обожнюю `cherry-pick` за його прямолінійнсть, це дуже зрозуміла концепція що не використовує прихованої магії",
+              "",
+              "Давайте подивимось на практиці!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Ми бачимо репозиторій де є певні зміни в гілці `side` які ми хочемо скопіювати в  `master`. Для цього можна використати rebase (який ми вже вивчили), але подивимось як з цим впорається cherry-pick."
+            ],
+            "afterMarkdowns": [
+              "Оба-на! Ми хотіли коміти `C2` та `C4` і git додав їх до поточного розташування. Просто й доступно!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Щоб пройти це рівень, просто скопіюй якісь зміни з трьох гілок показаних на діаграмі в master. В візуалізації видно які коміти потрібно скопіювати.",
+              ""
+            ]
+          }
+        }
+      ]
     }
   }
 };
-
 });
 
 require.define("/levels/rampup/interactiveRebase.js",function(require,module,exports,__dirname,__filename,process,global){exports.level = {
   "goalTreeString": "%7B%22branches%22%3A%7B%22master%22%3A%7B%22target%22%3A%22C4%27%22%2C%22id%22%3A%22master%22%7D%2C%22overHere%22%3A%7B%22target%22%3A%22C1%22%2C%22id%22%3A%22overHere%22%7D%7D%2C%22commits%22%3A%7B%22C0%22%3A%7B%22parents%22%3A%5B%5D%2C%22id%22%3A%22C0%22%2C%22rootCommit%22%3Atrue%7D%2C%22C1%22%3A%7B%22parents%22%3A%5B%22C0%22%5D%2C%22id%22%3A%22C1%22%7D%2C%22C2%22%3A%7B%22parents%22%3A%5B%22C1%22%5D%2C%22id%22%3A%22C2%22%7D%2C%22C3%22%3A%7B%22parents%22%3A%5B%22C2%22%5D%2C%22id%22%3A%22C3%22%7D%2C%22C4%22%3A%7B%22parents%22%3A%5B%22C3%22%5D%2C%22id%22%3A%22C4%22%7D%2C%22C5%22%3A%7B%22parents%22%3A%5B%22C4%22%5D%2C%22id%22%3A%22C5%22%7D%2C%22C3%27%22%3A%7B%22parents%22%3A%5B%22C1%22%5D%2C%22id%22%3A%22C3%27%22%7D%2C%22C5%27%22%3A%7B%22parents%22%3A%5B%22C3%27%22%5D%2C%22id%22%3A%22C5%27%22%7D%2C%22C4%27%22%3A%7B%22parents%22%3A%5B%22C5%27%22%5D%2C%22id%22%3A%22C4%27%22%7D%7D%2C%22HEAD%22%3A%7B%22target%22%3A%22master%22%2C%22id%22%3A%22HEAD%22%7D%7D",
-  "solutionCommand": "git rebase -i overHere",
+  "solutionCommand": "git rebase -i overHere --solution-ordering C3,C5,C4",
   "compareOnlyMasterHashAgnostic": true,
   "disabledMap": {
     "git cherry-pick": true
   },
   "startTree": "{\"branches\":{\"master\":{\"target\":\"C5\",\"id\":\"master\"},\"overHere\":{\"target\":\"C1\",\"id\":\"overHere\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"},\"C2\":{\"parents\":[\"C1\"],\"id\":\"C2\"},\"C3\":{\"parents\":[\"C2\"],\"id\":\"C3\"},\"C4\":{\"parents\":[\"C3\"],\"id\":\"C4\"},\"C5\":{\"parents\":[\"C4\"],\"id\":\"C5\"}},\"HEAD\":{\"target\":\"master\",\"id\":\"HEAD\"}}",
   "hint": {
-    "en_US": "you can use either branches or relative refs (HEAD~) to specify the rebase target"
+    "en_US": "you can use either branches or relative refs (HEAD~) to specify the rebase target",
+    "es_AR": "podés usar tanto ramas como referencias relativas (HEAD~) para especificar el objetivo del rebase",
+    "pt_BR": "Você pode usar ou ramos ou referências relativas (HEAD~) para especificar o alvo do rebase",
+    "de_DE": "Du kannst entweder Branches oder relative Ref-Angaben (z.B. HEAD~) benutzen, um das Ziel des Rebase anzugeben.",
+    "fr_FR": "Vous pouvez utiliser soit les branches, soit les références relatives (HEAD~) pour spéficier la cible à rebaser",
+    "zh_CN": "你可以使用 branch 或者是相对位置（HEAD~）來指定 rebase 的目标",
+    "zh_TW": "你可以指定 branch 或者是相對位置（HEAD~）來表示 rebase 的目標",
+    "ru_RU": "Можно использовать либо ветки, либо относительные ссылки (HEAD~), чтобы указать цель для Rebase",
+    "ja"   : "リベースする対象の指定には、ブランチ名や相対リファレンス(HEAD~)が使えます",
+    "ko"   : "리베이스할 타겟으로 브랜치나 상대 참조(HEAD~)를 사용할 수 있습니다",
+    "uk"   : "ти можеш використовувати гілки чи відносні посилання (HEAD~) щоб вказувати ціль для rebase"
   },
   "name": {
-    "en_US": "Interactive Rebase Intro"
+    "en_US": "Interactive Rebase Intro",
+    "es_AR": "Introducción al rebase interactivo",
+    "pt_BR": "Introdução ao rebase interativo",
+    "de_DE": "Einführung Interactive Rebase",
+    "ja"   : "インタラクティブrebase入門",
+    "fr_FR": "Introduction à rebase",
+    "zh_CN": "Rebase 交互命令介绍 ",
+    "zh_TW": "介紹互動式的 rebase",
+    "ru_RU": "Введение в интерактивный Rebase",
+    "ko"   : "인터랙티브 리베이스 소개",
+    "uk"   : "Знайомство з інтерактивним rebase"
   },
   "startDialog": {
     "en_US": {
@@ -21826,9 +22434,9 @@ require.define("/levels/rampup/interactiveRebase.js",function(require,module,exp
               "",
               "* You can reorder commits simply by changing their order in the UI (in our window this means dragging and dropping with the mouse).",
               "* You can choose to completely omit some commits. This is designated by `pick` -- toggling `pick` off means you want to drop the commit.",
-              "* Lastly, you can squash commits. Unfortunately our levels don't support this for a few logistical reasons, so I\"ll skip over the details of this. Long story short though -- it allows you to combine commits.",
+              "* Lastly, you can squash commits. Unfortunately our levels don't support this for a few logistical reasons, so I'll skip over the details of this. Long story short, though -- it allows you to combine commits.",
               "",
-              "Great! Lets see an example"
+              "Great! Let's see an example."
             ]
           }
         },
@@ -21854,10 +22462,659 @@ require.define("/levels/rampup/interactiveRebase.js",function(require,module,exp
           }
         }
       ]
+    },
+    "fr_FR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Interactive Rebase",
+              "",
+              "Git cherry-pick est pratique quand vous savez exactement quels commits vous voulez (_et_ que vous connaissez leurs identifiants) -- il est difficile de battre la simplicité qu'il procure.",
+              "",
+              "Mais que faire quand vous ne connaissez pas les identifiants des commits ? Heureusement git a pensé à vous dans pour ce cas-là ! Nous pouvons utiliser un rebase interactif pour cela -- c'est la meilleure façon de reconsidérer une série de commits que vous vous apprêtez à rebaser.",
+              "",
+              "Allons un peu plus dans les détails ..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Tout rebase interactif signifie utiliser la commande `rebase` avec l'option `-i`.",
+              "",
+              "Si vous mettez cette option, git va ouvrir une interface graphique pour vous montrer quels commits vont être copiés en dessous de la cible sur laquelle vous rebasez. Elle vous montre aussi les identifiants et commentaires des commits, ce qui est pratique pour s'orienter parmi les commits.",
+              "",
+              "Pour le \"vrai\" git, l'interface graphique correspond en fait à ouvrir un fichier dans un éditeur de texte comme `vim`. Pour notre exemple, j'ai construit une petite fenêtre de dialogue qui se comporte de la même façon."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Quand le rebase interactif s'ouvre, vous avez la possibilité de faire 3 choses :",
+              "",
+              "* Vous pouvez réarranger les commits simplement en changeant leur ordre dans l'interface graphique (dans notre fenêtre de dialogue, cela signifie déplacer les objets dedans avec la souris -- drag and drop).",
+              "* Vous pouvez omettre certains commits. Cela est désigné par `pick` : cliquer sur `pick` désélectionne/resélectionne le commit.",
+              "* Enfin, vous pouvez écraser des commits. Malheureusement notre niveau ne supporte pas cette option, nous allons donc sauter les détails concernant cette possibilité. Pour faire court, cela vous permet de mélanger des commits.",
+              "",
+              "Super ! Voyons un exemple."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Quand vous activez le bouton, une fenêtre de rebase interactif va s'ouvrir. Reordonnez quelques commits (ou supprimez-en certains) et regardez le résultat !"
+            ],
+            "afterMarkdowns": [
+              "Boum ! Git a copié les commits de la même manière que vous l'aviez spécifié."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Pour finir ce niveau, faites un rebase interactif et atteignez l'ordre indiqué dans le fenêtre d'objectif. Souvenez-vous que vous pouvez toujours exécuter les commandes `undo` ou `reset` pour réparer vos erreurs :D"
+            ]
+          }
+        }
+      ]
+    },
+    "zh_TW": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git interactive rebase",
+              "",
+              "當你知道你要複製哪些 commit（而且你也知道他們所對應的 hash 值），那麼 `git cherry-pick`  很適合你。",
+              "",
+              "但是如果你不知道你要的是哪些 commit 呢？ 很幸運的是，git 也有考慮到這個問題喔！我們可以用互動式的 rebase 來做到，當你想要檢查你想要的 commit 的時候，這會是最好的方法。",
+              "",
+              "讓我們來看一下這些細節..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "互動式的 rebase 相當於使用 rebase 這個指令的時候，後面加上一個 `-i` 的選項。",
+              "",
+              "如果你有包含了這個選項，git 就會打開一個 UI，讓你知道說有哪些 commit 會被複製下來，它也會告訴你它們的 hash 值以及可以讓你知道它們是什麼的訊息。",
+              "",
+              "在\"實務上\"，UI 會利用一個編輯器（例如 vim）打開一個檔案，對於我們來說，我已經設計了一個有同樣功能的對話視窗。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "當互動式的 rebase 的對話視窗打開之後，你就可以做到三件事情：",
+              "",
+              "* 你可以藉由改變這些 commit 在 UI 的位置（在我們的視窗中，可以透過滑鼠去拖拉），來重新排序它們的順序。",
+              "* 你可以選擇完全忽略掉某些 commit，可以用滑鼠按一下，使它變暗，就表示你要忽略掉該 commit。",
+              "* 最後, 你可以把 commit 合併在一起，但基於某些理由，在我們的關卡裡面並沒有這個功能。",
+              "",
+              "太棒了！讓我們來看一個例子！"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "當你按下按鈕的時候，一個互動式的 rebase 的視窗就會跳出來，重新排序一些 commit（大膽忽略掉某些 commit），然後看一下結果吧！"
+            ],
+            "afterMarkdowns": [
+              "看吧！ git 根據你所選擇的 commit，把它們複製了下來。"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成這個關卡，使用互動式的 rebase，並且完成視覺化目標所表示 commit 的順序，記住！你可以經常使用 `undo` 或者 `reset` 來修正你的一些錯誤:D"
+            ]
+          }
+        }
+      ]
+    },
+   "zh_CN": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 交互式的 Rebase",
+              "",
+              "如果你知道你所需要的提交对象(相应的 hash), 那用 Git cherry-pick 就非常方便了 -- 很难有简单的方式了",
+              "",
+              "但是如果你不清楚你想要的提交对象的 hash 呢? 幸好 Git 帮你想到了这一点, 我们可以利用交互 rebase -- 如果你想衍合一系列的提交, 这就是最方便的方法了",
+              "",
+              "让我们看看细节.."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "交互式 rebase 指的是 rebase 后跟一个参数: `-i`",
+              "",
+              "如果你包含了这个选项, Git 会开启一个 UI 并 展示出将要被复制到目标的提交对象, 它也会显示它们的提交 hash 和信息",
+              "",
+              "真实的 Git, UI 窗口指的是在类似于 Vim 的文本编辑器中打开一个文件. 考虑到我们的目标, 我建立了一个小型的会话窗口以完成相同的事儿."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "当 rebase 会话窗口打开时, 你能做3件事:",
+              "",
+              "* 你可以在 UI 中做 提交对象的排序(在我们的窗口中, 这意味着你可以拖放完成这点)",
+              "* 你可以忽略某些提交 -- pick 会变暗",
+              "* 最后, 你可以合并提交. 遗憾的是我们的课程不支持此功能.",
+              "",
+              "好! 看看例子"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "当你点这个按钮时, 一个交互式的 rebase 窗口就会出现. 对提交对象做个排序, 再看看结果"
+            ],
+            "afterMarkdowns": [
+              "按照你指定的方式, Git 克隆了这些提交"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成本节, 做一个交互式的 rebase , 实现虚拟目标窗口中提示的提交顺序. 记住,  你随时都可以用 `undo`, `reset` 修复你的错误"
+            ]
+          }
+        }
+      ]
+    },
+    "es_AR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git rebase interactivo",
+              "",
+              "git cherry-pick es genial cuando sabés cuáles commits querés (_y_ sabés sus hashes) -- es dificil superar la simpleza que provee.",
+              "",
+              "Pero ¿qué pasa cuando no sabés qué commits querés? Por suerte ¡git te cubre en esta situación, también! Podemos usar el rebase interactivo para esto -- es la mejor manera de revisar una serie de commits que estás por rebasear.",
+              "",
+              "Entremos en los detalles..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Todo rebase interactivo significa usar el comando `rebase` con la opción `-i`.",
+              "",
+              "Si incluís esta opción, git abrirá una UI para mostrarte qué commits están a punto de ser copiados sobre el objetivo del rebase. También muestra sus hashes y mensajes, que ayuda mucho para saber qué es cada commit.",
+              "",
+              "Para el git \"de verdad\", la UI signfica abrir un archivo en un editor de textos como `vim`. Para nuestro propósito, hice una pequeña interfaz que se comporta de ese mismo modo."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Cuando el diálogo de rebase interactivo se abre, tenés la capacidad de hacer 3 cosas:",
+              "",
+              "* Podés reordenar los commits con solamente cambiar su orden en la UI (en nuestra ventana, eso significa hacer drag & drop con el mouse).",
+              "* Podés elegir ignorar completamente algunos commits. Esto se designa con `pick` -- no hacerle `pick` a algún commit significa que querés ignorarlo.",
+              "* Finalmente, podés _squashear_ commits. Desafortunadamente, nuestros niveles no soportan esto por cuestiones logísticas, por lo que voy a ahorrarte los detalles. Haciéndola corta, te permite combinar varios commits en uno solo.",
+              "",
+              "¡Genial! Veamos un ejemplo."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Cuando apretes el botón, va a aparecer una ventana de rebase interactivo. Reordená los commits (sentite libre de ignorar alguno, también) ¡y mirá el resultado!"
+            ],
+            "afterMarkdowns": [
+              "¡Boom! Git copió los commits exactamente de la misma manera que lo especificaste en la UI"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar el nivel, hacé un rebase interactivo y alcanzá el orden que se muestra en la visualización objetivo. Acordate que siempre podés hacer `undo` y `reset` para arreglar errores :D"
+            ]
+          }
+        }
+      ]
+    },
+    "pt_BR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Rebase Interativo do Git",
+              "",
+              "O cherry-pick é ótimo quando você sabe de antemão quais commits você quer (_e_ você sabe os hashes correspondentes) -- é difícil bater a simplicidade que ele oferece.",
+              "",
+              "Mas e quando você não sabe quais commits você quer? Felizmente o git pode te ajudar nesta situação também! Podemos usar o rebase interativo para isso -- trata-se da melhor forma de rever uma série de commits sobre os quais você está prestes a fazer um rebase.",
+              "",
+              "Mergulhemos nos detalhes..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "O rebase interativo é simplesmente o comando `rebase` com a opção `-i`.",
+              "",
+              "Se você incluir essa opção, o git abrirá uma interface para mostrar quais commits estão prestes a serem copiados abaixo do alvo do rebase. Ele também mostra os hashes e as mensagens dos commits, o que é ótimo para ter noção do que é o que.",
+              "",
+              "No git \"de verdade\", a interface nada mais é que um arquivo aberto em um editor de texto (por exemplo o `vim`). Para os nossos propósitos, eu montei uma pequena janela que se comporta da mesma forma."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Quando a janela de rebase interativo abrir, você pode fazer 3 coisas diferentes:",
+              "",
+              "* Você pode reordenar os commits simplesmente mudando sua ordem na interface (na nossa janela isso significa arrastar e soltar com o mouse).",
+              "* Você pode escolher simplesmente omitir alguns commits. Para isso, clique no botão `pick` -- deixar o `pick` desligado significa que você quer descartar o commit.",
+              "* Por fim, você pode \"esmagar\" (fazer squash) nos commits. Infelizmente, nosso tutorial não será capaz de cobrir essa funcionalidade por alguns motivos logísticos, então vamos pular os detalhes disto. Em resumo, no entanto, o squash permite que você combine commits.",
+              "",
+              "Ótimo! Vejamos um exemplo."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Quando você clicar o botão, uma janela de rebase interativo se abrirá. Reordene alguns commits da forma como você preferir (ou sinta-se livre para desmarcar o `pick` de alguns) e veja o resultado!"
+            ],
+            "afterMarkdowns": [
+              "Boom! O Git copiou alguns commits exatamente da mesma forma que você os especificou na janela"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para finalizar este nível, faça um rebase interativo e obtenha a ordem mostrada na visualização do objetivo. Lembre-se que você pode usar os comandos `undo` ou `reset` para corrigir erros :D"
+            ]
+          }
+        }
+      ]
+    },
+    "de_DE": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Interaktiver Rebase",
+              "",
+              "Cherry-pick ist großartig wenn du genau weißt, welche Commits du willst (_und_ ihre jeweiligen Hashes kennst) -- es ist dann schwer an Einfachheit zu überbieten.",
+              "",
+              "Aber wie sieht es aus, wenn du die Commits nicht genau kennst, die du brauchst? Zum Glück bietet Git auch dafür eine Lösung an. Das können wir mit interaktivem Rebase machen -- die beste Art sich eine Serie von Commits in einem Rebase genau anzusehen.",
+              "",
+              "Schauen wir uns die Details an ..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Interaktives Rebase bedeutet einfach nur, dass man dem `rebase` Befehl die Option `-i` hinzufügt.",
+              "",
+              "Wenn du das machst, zeigt Git dir jeden einzelnen Commit, der durch den Rebase kopiert werden würde. Es zeigt dir die Hashes und Kommentare, was gut ist um einen Überblick zu bekommen.",
+              "",
+              "In echtem Git besteht dieser Dialog daraus, die Commits in einem Text-Editor angezeigt zu bekommen. Für unsere Zwecke hab ich ein kleines Dialog-Fenster gebaut, dass sich ähnlich verhält."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Wenn sich der Dialog für den interaktiven Rebase öffnet, kannst du drei Dinge tun:",
+              "",
+              "* Du kannst die Reihenfolge der Commits durch Ziehen und Ablegen ändern.",
+              "* Du kannst Git sagen, einen Commit beim Rebase zu ignorieren -- im Dialog durch die Schaltfläche `pick` dargestellt.",
+              "* Außerdem kannst du Commit zusammenfassen (squash). Leider wird das hier nicht unterstützt, aber in echtem Git fasst es Commits zu einem zusammen.",
+              "",
+              "Super! Schauen wir uns ein Beispiel an."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Wenn du die Schaltfläche anklickst wird sich der Rebase-Dialog öffnen. Veränder die Reihenfolge der Commits oder klick bei einigen auf `pick` und schau dir das Ergebnis an."
+            ],
+            "afterMarkdowns": [
+              "Bämm! Git hat die Commits genau so kopiert, wie du es ausgewählt hast."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Um dieses Level zu schaffen mach einen interaktiven Rebase, um genau die Reihenfolge zu erzeugen die im Ziel-Baum angezeigt wird. Denk daran, dass du jederzeit mit `undo` oder `reset` Fehler rückgängig machen kannst. :D"
+            ]
+          }
+        }
+      ]
+    },
+    "ja": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git インタラクティブrebase",
+              "",
+              "どのコミットを操りたいか（そしてそれを指定するハッシュ）がわかる時に`git cherry-pick`はとても便利で、その簡単さはとてもありがたいです。 ",
+              "",
+              "しかし、どのコミットを操りたいかがわからない時はどうでしょう？ありがたいことに、そんな時にぴったりのコマンドがgitに備わっています。このためにgitのインタラクティブrebaseを使えます。rebaseしたい一連のコミットを一括で見るベストな方法です。",
+              "",
+              "具体的に見てみましょう..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "インタラクティブrebaseとは単に、`rebase`コマンドに`-i`オプションを合わせて使うことです。",
+              "",
+              "このオプションをつければ、gitがインタフェースを開き、どのコミットがrebase対象の下にコピーされるかを確認できます。それらのコミットのハッシュやメッセージも表示され、rebaseの概要を一眼で見るのに便利です。",
+              "",
+              "\"ホンモノ\"のgitでは、その「インターフェース」とは`vim`などのテキストエディタの中でファイルが開くだけです。ここでコンセプトを見せるために同じような動作をする小さなダイアログウィンドウを作りました。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "インタラクティブrebaseダイアログが開くと、３つの操作から選べます:",
+              "",
+              "* UIウィンドウのなかで順番を調整するだけでコミットの順番を変えられます（こちらのダイアログでは、マウスでドラッグアンドドロップで操作します）。",
+              "* 特定のコミットを丸ごと除くこともできます。除きたいコミットを指定するには`pick`をオフにします。",
+              "* 最後に、コミットを組み合わせられます。技術的に制限があり再現できないのでその詳細な説明を省きますが、短く言いますと、複数のコミットを一つにまとめることができる機能です。",
+              "",
+              "さて、例を見てみましょう。"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "ボタンを押せば、インタラクティブrebaseウィンドウが現れます。コミットの順番を変更したり、`pick`を外したりしてみて、その結果を見てみましょう！"
+            ],
+            "afterMarkdowns": [
+              "よっしゃー。gitがUIで指定されたようにコミットをコピーしました！"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "このレベルをクリアするにはインタラクティブrebaseを実行し、ゴールのビジュアライズに表示されている順番を実現しましょう。ミスがあれば`undo`や`reset`で修正できるのをお忘れなく。"
+            ]
+          }
+        }
+      ]
+    },
+    "ru_RU": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Interactive Rebase",
+              "",
+              "Git cherry-pick прекрасен, когда точно известно, какие коммиты нужны (и известны их точные хеши)",
+              "",
+              "Но как быть в случае, когда точно не известно какие коммиты нужны? К счастью, Git позаботился о таких ситуациях! Можно использовать интерактивный rebase для этого - лучший способ отобрать набор коммитов для rebase.",
+              "",
+              "Углубимся в детали."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Всё, что нужно для интерактивного rebase - это опция `-i`",
+              "",
+              "Если добавить эту опцию, Git откроет интерфейс просмотра того, какие коммиты готовы к копированию на цель rebase (target). Также показываются хеши коммитов и комментарии к ним, так что можно легко понять что к чему.",
+              "",
+              "Для \"реального\" Git, этот интерфейс означает просто открытие файла в редакторе типа vim. Для этой обучалки, я сделал небольшое диалоговое окно, которое по сути делает то же, что и редактор."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "После открытия окна интерактивного rebase есть три варианта для каждого коммита:",
+              "",
+              "* Можно сменить положение коммита по порядку, переставив строчку с ним в редакторе (у нас в окошке строку с коммитом можно перенести просто мышкой).",
+              "* Можно \"выкинуть\" коммит из ребейза. Для этого есть `pick` - переключение его означает, что нужно выкинуть коммит.",
+              "* Наконец, можно соединить коммиты. В этом уровне игры у нас не реализована эта возможность, но, вкратце, при помощи этой функции можно объединять изменения двух коммитов.",
+              "",
+              "Ну что ж, посмотрим на примеры!"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "После нажатия на эту кнопку появится окно интерактивного rebase. Переставь несколько коммитов (или удали кое-какие) и посмотри, что получится в итоге!"
+            ],
+            "afterMarkdowns": [
+              "Бах! Git скопировал коммиты в точности так, как было указано через интерфейс!"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Чтобы пройти этот уровень, переставь коммиты при помощи интерактивного rebase в таком порядке, как указано на визуализации. На всякий случай, помни, что всегда можно исправить ошибку, вызвав команду undo или reset."
+            ]
+          }
+        }
+      ]
+    },
+  "ko": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git 인터렉티브 리베이스(Interactive Rebase)",
+              "",
+              "Git 체리-픽은 여러분이 원하는 커밋이 무엇인지 알때(각각의 해시값도) 아주 유용합니다 -- 체리-픽이 제공하는 간단함은 아주 매력적입니다.",
+              "",
+              "하지만 원하는 커밋을 모르는 상황에는 어쩌죠? 고맙게도 git은 이런상황에 대한 대안이 있습니다. 우리는 이럴 때 인터렉티브 리베이스를 사용하면됩니다 -- 리베이스할 일련의 커밋들을 검토할 수 있는 가장 좋은 방법입니다.",
+              "",
+              "자세히 알아보죠..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "인터렉티브 리베이스가 의미하는 뜻은 `rebase` 명령어를 사용할 때 `-i` 옵션을 같이 사용한다는 것입니다.",
+              "",
+              "이 옵션을 추가하면, git은 리베이스의 목적지가 되는 곳 아래에 복사될 커밋들을 보여주는 UI를 띄울것 입니다. 각 커밋을 구분할 수 있는 각각의 해시들과 메시지도 보여줍니다.",
+              "",
+              "\"실제\"git 에서는 UI창을 띄우는것 대신에 `vim`과 같은 텍스트 편집기에서 파일을 엽니다. 저희는 배우는것이 목적이기에 같은 역할을 하는 작은 대화창을 만들어서 대신했습니다."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "인터렉티브 리베이스 대화창이 열리면, 3가지를 할 수 있습니다:",
+              "",
+              "* 적용할 커밋들의 순서를 UI를 통해 바꿀수 있습니다(여기서는 마우스 드래그앤 드롭으로 가능합니다)",
+              "* 원하지 않는 커밋들을 뺄 수 있습니다. 이것은 `pick`을 이용해 지정할 수 있습니다(여기서는 `pick`토글 버튼을 끄는것으로 가능합니다)",
+              "* 마지막으로, 커밋을 스쿼시(squash)할 수 있습니다. 불행히도 저희 레벨은 몇개의 논리적 문제들 때문에 지원을 하지 않습니다. 이거에 대해서는 넘어가겠습니다. 요약하자면 커밋을 합칠 수 있습니다",
+              "",
+              "자! 예시를 확인해 봅시다."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "버튼을 누르면 인터렉티브 리베이스 대화창이 뜰것 입니다. 커밋들의 순서를 바꿔보고(커밋을 빼 봐도 됩니다) 결과를 확인해봅시다!"
+            ],
+            "afterMarkdowns": [
+              "Boom! Git이 UI를 통해 명시한 그대로 커밋들을 복사했습니다."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "이번 레벨을 통과하기 위해서 goal에 나타난 순서대로 만들기 위해 인터렉티브 리베이스를 사용해봅시다. `undo`와 `reset`을 통해 했던 실수들은 되돌릴 수 있습니다 :D"
+            ]
+          }
+        }
+      ]
+    },
+    "uk": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Інтерактивний Rebase",
+              "",
+              "Git cherry-pick зручно користуватись коли ти знаєш які коміти тобі потрібні (_і_ ти знаєш їхні хеші) -- важко вигадати щось простіше.",
+              "",
+              "Але що робити в ситуації коли ти не знаєш які коміти потрібні? На щастя git може впоратись і з цим! Для цього випадку використовують інтерактивний rebase -- це найкращий спосіб перевірити серію комітів які потрібно заребейсити.",
+              "",
+              "Розглянемо це детальніше..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Інтерактивний rebase це насправді команда  `rebase` з опцією `-i`.",
+              "",
+              "Якщо додати цю опцію, git відкриє діалог в якому покаже які коміти будуть скопійовані до кінцевого призначення. Він також покаже хеші комітів та їхні повідомлення, що допоможе розібратися що й до чого.",
+              "",
+              "В \"справжньому\" git, замість UI вікна відкриється файл в сконфігурованому текстовому редакторі, можливо `vim`. Для цього туторіалу я створив невеличке діалогове вікно що поводиться приблизно так само."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Коли відкриється вікно інтерактивного rebase ти можеш зробити три речі:",
+              "",
+              "* Ти можеш переставити коміти між собою просто змінивши їх порядок в діалозі (в нашому вікні ти зможеш перетягнути їх мишкою).",
+              "* Ти можеш повністю пропустити якісь коміти. В туторіалі потрібно вимкнути опцію `pick`, але в справжньому гіт потрібно просто видалити відповідний рядок.",
+              "* Також можна розчавити (squash) якісь коміти. На жаль наш туторіал не підтримує цю фічу (так як ми не підтримуємо роботу з файлами), але це дуже зручна опція в справжньому гіт. За її допомогою можна декілька різніх комітів об’єднати в один",
+              "",
+              "Чудово! Давайте розберемо це на прикладі"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Коли ти натиснеш кнопку відкриється вікно інтерактивного rebase. Перестав якісь коміти (можеш пропустити якісь якщо хочеш) і подивись що вийде!"
+            ],
+            "afterMarkdowns": [
+              "Ка-бум! Git cкопіював коміти відповідно до того що було вказано в UI"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Щоб пройти цей рівень за допомогою інтерактивного rebase впорядкуй коміти як показано на візуалізації. Пам’ятай що ти завжди можеш використати `undo` чи `reset` щоб виправити помилку :D"
+            ]
+          }
+        }
+      ]
     }
   }
 };
-
 });
 
 require.define("/levels/mixed/grabbingOneCommit.js",function(require,module,exports,__dirname,__filename,process,global){exports.level = {
@@ -22079,7 +23336,7 @@ require.define("/levels/mixed/jugglingCommits.js",function(require,module,export
     "ko": "커밋들 갖고 놀기",
     "en_US": "Juggling Commits",
     "ja": "Juggling Commits",
-    "zh_CN": "提交变换戏法"
+    "zh_CN": "有趣的提交(commits)"
   },
   "hint": {
     "en_US": "The first command is git rebase -i HEAD~2",
@@ -22174,7 +23431,7 @@ require.define("/levels/mixed/jugglingCommits.js",function(require,module,export
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## 提交变换戏法",
+              "## 有趣的提交(commits)",
               "",
               "下面这种情况也是经常出现的。例如你之前已经在 `newImage` 分支上做了一些提交，然后又在 `caption` 分支上做了一些相关的提交，因此它们看起来是一个连一个的（stacked on top of each other in your repository）。",
               "",
@@ -22273,7 +23530,7 @@ require.define("/levels/mixed/jugglingCommits2.js",function(require,module,expor
     "ko": "커밋 갖고 놀기 #2",
     "en_US": "Juggling Commits #2",
     "ja": "コミットをやりくりする その2",
-    "zh_CN": "提交交换戏法 #2"
+    "zh_CN": "有趣的提交(commits) #2"
   },
   "hint": {
     "en_US": "Don't forget to forward master to the updated changes!",
@@ -23804,29 +25061,47 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 欢迎光临 LearnGitBranching!',
+        '## 欢迎来到GIT的世界',
         '',
-        '本应用旨在帮助初学者领会 git 分支背后的强大概念。',
-        '希望你能喜欢这个应用，并学到知识！',
+        '本应用旨在帮助大家领会 git 分支背后的强大概念。',
         '',
-        '# 演示!',
+        '希望各位能喜欢这个培训，并能够快速掌握GIT的基本命令！',
         '',
-        '如果你还没看过演示，请到此查看：',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?demo](http://pcottle.github.io/learnGitBranching/?demo)',
+        '### 不是有SVN了吗？',
         '',
-        '厌烦这个对话框？ 在 URL 后头加上 `?NODEMO` 就看不到它了，也可以直接点下边这个链接：',
+        '那先来看看GIT与SVN有什么区别',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?NODEMO](http://pcottle.github.io/learnGitBranching/?NODEMO)'
+        '',
+        '',
+        ''
       ]
     }
   }, {
     type: 'ModalAlert',
     options: {
       markdowns: [
+        '## GIT与SVN 有何不同',
+        '',
+        ' * GIT是分布式的，SVN不是',
+        '',
+        ' * GIT把内容按元数据方式存储，而SVN是按文件',
+        '',
+        ' * GIT分支和SVN的分支不同',
+        '',
+        ' * GIT没有一个全局的版本号，而SVN有',
+        '',
+        ' * GIT的内容完整性要优于SVN',
+        ''
+      ]
+    }
+  } , {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
         '## Git 命令',
         '',
-        '在沙盒模式里，你有好多命令可用。 包括：',
+        '这次培训仅仅使用的下面这些命令：',
         '',
         ' * commit',
         ' * branch',
@@ -23838,16 +25113,31 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         ' * merge'
       ]
     }
-  }, {
+  },  {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 分享即关怀',
+        '## 同时，有好多命令不支持，',
         '',
-        '使用 `export tree` 和 `import tree` 与朋友分享 Git 树',
+        '如下面这些命令。为什么不支持? 因为，我们主要是讲branch：',
         '',
-        '有个好课程可以分享？试试用 `build level` 创建一个关卡，或者 `import level` 试试朋友的。',
-        '',
+        ' * clone 克隆一个项目',
+        ' * remote 添加remote',
+        ' * add 跟踪文件',
+        ' * fetch 获取远程数据',
+        ' * pull 从远程repo(sitory)中拉数据->合并',
+        ' * push 将数据推到远程的repo(sitory)中',
+        ' * branch -d 删除branch',
+        ' * push origin --delete 或者 push origin :<branchName>',
+        ' * tag 打tag',
+        ' * push origin :refs/tags/<tagname> 删除tag'
+      ]
+    }
+  },  {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
+        '## Welcome to Git World!',
         '言归正传，让我们先从 `levels` 开始……'
       ]
     }
@@ -24641,7 +25931,7 @@ require.define("/src/js/dialogs/nextLevel.js",function(require,module,exports,__
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 碉堡了！',
+        '## 恭喜！',
         '',
         '你用 *{numCommands}* 条命令搞定了这一关；我们的答案要用 {best}。'
       ]
@@ -24779,29 +26069,47 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 欢迎光临 LearnGitBranching!',
+        '## 欢迎来到GIT的世界',
         '',
-        '本应用旨在帮助初学者领会 git 分支背后的强大概念。',
-        '希望你能喜欢这个应用，并学到知识！',
+        '本应用旨在帮助大家领会 git 分支背后的强大概念。',
         '',
-        '# 演示!',
+        '希望各位能喜欢这个培训，并能够快速掌握GIT的基本命令！',
         '',
-        '如果你还没看过演示，请到此查看：',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?demo](http://pcottle.github.io/learnGitBranching/?demo)',
+        '### 不是有SVN了吗？',
         '',
-        '厌烦这个对话框？ 在 URL 后头加上 `?NODEMO` 就看不到它了，也可以直接点下边这个链接：',
+        '那先来看看GIT与SVN有什么区别',
         '',
-        '[http://pcottle.github.io/learnGitBranching/?NODEMO](http://pcottle.github.io/learnGitBranching/?NODEMO)'
+        '',
+        '',
+        ''
       ]
     }
   }, {
     type: 'ModalAlert',
     options: {
       markdowns: [
+        '## GIT与SVN 有何不同',
+        '',
+        ' * GIT是分布式的，SVN不是',
+        '',
+        ' * GIT把内容按元数据方式存储，而SVN是按文件',
+        '',
+        ' * GIT分支和SVN的分支不同',
+        '',
+        ' * GIT没有一个全局的版本号，而SVN有',
+        '',
+        ' * GIT的内容完整性要优于SVN',
+        ''
+      ]
+    }
+  } , {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
         '## Git 命令',
         '',
-        '在沙盒模式里，你有好多命令可用。 包括：',
+        '这次培训仅仅使用的下面这些命令：',
         '',
         ' * commit',
         ' * branch',
@@ -24813,16 +26121,31 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         ' * merge'
       ]
     }
-  }, {
+  },  {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## 分享即关怀',
+        '## 同时，有好多命令不支持，',
         '',
-        '使用 `export tree` 和 `import tree` 与朋友分享 Git 树',
+        '如下面这些命令。为什么不支持? 因为，我们主要是讲branch：',
         '',
-        '有个好课程可以分享？试试用 `build level` 创建一个关卡，或者 `import level` 试试朋友的。',
-        '',
+        ' * clone 克隆一个项目',
+        ' * remote 添加remote',
+        ' * add 跟踪文件',
+        ' * fetch 获取远程数据',
+        ' * pull 从远程repo(sitory)中拉数据->合并',
+        ' * push 将数据推到远程的repo(sitory)中',
+        ' * branch -d 删除branch',
+        ' * push origin --delete 或者 push origin :<branchName>',
+        ' * tag 打tag',
+        ' * push origin :refs/tags/<tagname> 删除tag'
+      ]
+    }
+  },  {
+    type: 'ModalAlert',
+    options: {
+      markdowns: [
+        '## Welcome to Git World!',
         '言归正传，让我们先从 `levels` 开始……'
       ]
     }
@@ -28570,7 +29893,7 @@ var util = require('../util');
 var strings = require('../intl/strings').strings;
 
 var getDefaultLocale = exports.getDefaultLocale = function() {
-  return 'en_US';
+  return 'zh_CN';
 };
 
 var getLocale = exports.getLocale = function() {
@@ -28681,7 +30004,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'ja': '最後のレベルをクリアしました！すごい！！',
     'en_US': 'Wow! You finished the last level, great!',
-    'zh_CN': '我的个天！你完成了最后一关，碉堡了！',
+    'zh_CN': '我的天呀！你完成了最后一关，太帅了！',
     'fr_FR': 'Félicitations, vous avez réussi le dernier niveau !'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -28689,7 +30012,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Would you like to move on to *"{nextLevel}"*, the next level?',
     'ja': '次の章 *"{nextLevel}"* へ進みますか？',
-    'zh_CN': '要不前进到下一关 *“{nextLevel}”*？',
+    'zh_CN': '要不前进到下一关 *"{nextLevel}"* ？',
     'fr_FR': 'Voulez-vous passer à *"{nextLevel}"*, le prochain niveau ?'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -28697,7 +30020,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'One of the lines in the next level dialog',
     'en_US': 'Awesome! You matched or exceeded our solution.',
     'ja': '素晴らしい！このレベルをクリアしましたね。',
-    'zh_CN': '牛鼻啊！你达到或者完爆了我们的答案。',
+    'zh_CN': '我的天呀！你竞然答对了！',
     'fr_FR': 'Fabuleux ! Votre solution a égalé ou surpassé notre solution.'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -28759,7 +30082,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     '__desc__': 'The dummy commit message for all commits. Feel free to put in a ' +
       'shoutout to your school / city / whatever!',
     'en_US': 'Quick commit. Go Bears!',
-    'zh_CN': '快速提交。上啊月熊！',
+    'zh_CN': '快速提交。上啊！',
     'fr_FR': 'Commit rapide. NoMaN Sux!'
   },
   'git-error-origin-fetch-uptodate': {
@@ -28818,7 +30141,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   'git-result-nothing': {
     '__desc__': 'The message that explains the result of a git command',
     'en_US': 'Nothing to do...',
-    'zh_CN': '没啥鸟事……',
+    'zh_CN': '没啥鸟事了……',
     'fr_FR': 'Rien à effectuer…'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -28940,7 +30263,7 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
     'en_US': 'Learn Git Branching',
     'ja': '日本語版リポジトリ',
     'ko': 'Git 브랜치 배우기',
-    'zh_CN': '学习Git分支',
+    'zh_CN': 'Git Branch课程分享 - 同程',
     'fr_FR': 'Apprenez Git Branching'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -29181,7 +30504,8 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   ///////////////////////////////////////////////////////////////////////////
   'goal-only-master': {
     '__desc__': 'the helper message for the window that shows the goal tree when the goal will only be compared using the master branch',
-    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"'
+    'en_US': '<span class="fwber">Note:</span> Only the master branch will be checked in this level. The other branches are simply for reference (shown as dashed labels below). As always, you can hide this dialog with "hide goal"',
+    'zh_CN': '<span class="fwber">注意:</span> 本关卡，在master分支上操作的. 其他分支只是作为简单引用。 如果想关闭目标面板，输入"hide goal"'
   },
   ///////////////////////////////////////////////////////////////////////////
   'hide-goal': {
@@ -33163,7 +34487,7 @@ var GitDemonstrationView = ContainedBase.extend({
     this.JSON.afterHTML = convert(this.JSON.afterMarkdowns);
 
     this.container = new ModalTerminal({
-      title: options.title || 'Git Demonstration'
+      title: options.title || 'Git 示例'
     });
     this.render();
     this.checkScroll();
@@ -38771,7 +40095,7 @@ require.define("/src/levels/intro/commits.js",function(require,module,exports,__
             ],
             "command": "git commit",
             "afterMarkdowns": [
-              "看！碉堡吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
+              "看！好玩吧！我们修改了代码，并保存为一次提交记录。刚刚做的提交`C2`有一个父提交（parent）`C1`，代表此次修改的基础。"
             ],
             "beforeCommand": ""
           }
@@ -39065,7 +40389,7 @@ require.define("/src/levels/intro/merging.js",function(require,module,exports,__
             "afterMarkdowns": [
               "因为 `bugFix` 分支在 `master` 分支的下游，git什么都不用做，只是简单地把`bugfix`分支移动到`master`指向的提交记录。",
               "",
-              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！走起！"
+              "现在所有的提交记录的颜色都是一样的啦，这表明每一个分支都包含了代码库的所有修改！继续！"
             ],
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit; git merge bugFix"
           }
@@ -39412,7 +40736,7 @@ require.define("/src/levels/intro/rebasing.js",function(require,module,exports,_
             ],
             "command": "git rebase master",
             "afterMarkdowns": [
-              "碉堡吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
+              "好完吧，现在 bugFix 分支上的工作在 master 的最前端，同时我们也得到了一个更线性的提交序列。",
               "",
               "注意，提交记录 C3 仍然存在（阴影的那货就是你了，还看什么看），而我们已经将 C3 复制到了master。",
               "",
@@ -39744,7 +41068,7 @@ require.define("/src/levels/mixed/jugglingCommits.js",function(require,module,ex
     "ko": "커밋들 갖고 놀기",
     "en_US": "Juggling Commits",
     "ja": "Juggling Commits",
-    "zh_CN": "提交变换戏法"
+    "zh_CN": "有趣的提交(commits)"
   },
   "hint": {
     "en_US": "The first command is git rebase -i HEAD~2",
@@ -39839,7 +41163,7 @@ require.define("/src/levels/mixed/jugglingCommits.js",function(require,module,ex
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## 提交变换戏法",
+              "## 有趣的提交(commits)",
               "",
               "下面这种情况也是经常出现的。例如你之前已经在 `newImage` 分支上做了一些提交，然后又在 `caption` 分支上做了一些相关的提交，因此它们看起来是一个连一个的（stacked on top of each other in your repository）。",
               "",
@@ -39939,7 +41263,7 @@ require.define("/src/levels/mixed/jugglingCommits2.js",function(require,module,e
     "ko": "커밋 갖고 놀기 #2",
     "en_US": "Juggling Commits #2",
     "ja": "コミットをやりくりする その2",
-    "zh_CN": "提交交换戏法 #2"
+    "zh_CN": "有趣的提交(commits) #2"
   },
   "hint": {
     "en_US": "Don't forget to forward master to the updated changes!",
@@ -40128,10 +41452,30 @@ require.define("/src/levels/rampup/cherryPick.js",function(require,module,export
   },
   "startTree": "{\"branches\":{\"master\":{\"target\":\"C1\",\"id\":\"master\"},\"bugFix\":{\"target\":\"C3\",\"id\":\"bugFix\"},\"side\":{\"target\":\"C5\",\"id\":\"side\"},\"another\":{\"target\":\"C7\",\"id\":\"another\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"},\"C2\":{\"parents\":[\"C1\"],\"id\":\"C2\"},\"C3\":{\"parents\":[\"C2\"],\"id\":\"C3\"},\"C4\":{\"parents\":[\"C1\"],\"id\":\"C4\"},\"C5\":{\"parents\":[\"C4\"],\"id\":\"C5\"},\"C6\":{\"parents\":[\"C1\"],\"id\":\"C6\"},\"C7\":{\"parents\":[\"C6\"],\"id\":\"C7\"}},\"HEAD\":{\"target\":\"master\",\"id\":\"HEAD\"}}",
   "name": {
-    "en_US": "Cherry-pick Intro"
+    "fr_FR": "Introduction à cherry-pick",
+    "en_US": "Cherry-pick Intro",
+    "de_DE": "Einführung Cherry-picking",
+    "ja"   : "cherry-pick入門",
+    "es_AR": "Introducción a cherry-pick",
+    "pt_BR": "Introdução ao cherry-pick",
+    "zh_CN": "介绍 Cherry-pick",
+    "zh_TW": "介紹 cherry-pick",
+    "ru_RU": "Введение в Cherry-pick",
+    "ko"   : "Cherry-pick 소개",
+    "uk": "Знайомство з cherry-pick"
   },
   "hint": {
-    "en_US": "git cherry-pick followed by commit names!"
+    "fr_FR": "git cherry-pick suivis par les noms de commits",
+    "en_US": "git cherry-pick followed by commit names!",
+    "de_DE": "git cherry-pick gefolgt von Commit-Namen.",
+    "ja"   : "git cherry-pickの後にコミット名を追加",
+    "es_AR": "git cherry-pick seguido de los nombres de los commits",
+    "pt_BR": "git cherry-pick seguido dos nomes dos commits",
+    "zh_CN": "git cherry-pick 后面跟着 commit 的名字",
+    "zh_TW": "git cherry-pick 後面要接著 commit 的名稱",
+    "ru_RU": "git cherry-pick основывается на именах коммитов!",
+    "ko"   : "커밋의 이름들로 git cherry-pick 하세요!",
+    "uk": "git cherry-pick базується на іменах комітів!"
   },
   "startDialog": {
     "en_US": {
@@ -40144,7 +41488,7 @@ require.define("/src/levels/rampup/cherryPick.js",function(require,module,export
               "",
               "So far we've covered the basics of git -- committing, branching, and moving around in the source tree. Just these concepts are enough to leverage 90% of the power of git repositories and cover the main needs of developers.",
               "",
-              "That remaining 10%, however, can be quite useful during complex workflows (or when you've gotten yourself into a bind). The next concept we're going to cover is \"moving work around\" -- in other words, its a way for developers to say \"I want this work here and that work here\" in precise, eloquent, flexible ways.",
+              "That remaining 10%, however, can be quite useful during complex workflows (or when you've gotten yourself into a bind). The next concept we're going to cover is \"moving work around\" -- in other words, it's a way for developers to say \"I want this work here and that work there\" in precise, eloquent, flexible ways.",
               "",
               "This may seem like a lot, but it's a simple concept."
             ]
@@ -40190,10 +41534,577 @@ require.define("/src/levels/rampup/cherryPick.js",function(require,module,export
           }
         }
       ]
+    },
+    "fr_FR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Déplacer votre travail",
+              "",
+              "Nous avons maintenant pratiqué les bases de git -- commits, branches, et déplacements dans l'arbre des commits. Ces seuls concepts sont suffisants pour utiliser 90% du pouvoir des dépôt git et satisfaire les principaux besoins des développeurs.",
+              "",
+              "Les 10% restants, cependant, peuvent être assez utiles pour systèmes assez complexes (ou quand vous vous êtes mis tout seul dans le pétrin). Le prochain concept que nous allons aborder est \"le déplacement de travail\" (moving work around) -- en d'autres termes, c'est une façon des développeurs de dire  \"Je veux ce travail ici et cet autre là.\".",
+              "",
+              "Cela peut sembler compliqué, mais c'est un concept simple."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "La première commande de cette série est `git cherry-pick`. Elle a le prototype suivant :",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "C'est une manière simple de dire qu'on voudrait copier une série de commits en-dessous de notre emplacement actuel (`HEAD`). Personnellement, j'adore `cherry-pick` parce qu'il y a un petit peu de magie dedans, et parce que c'est facile à comprendre.",
+              "",
+              "Faisons une démonstration !",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Ici le dépôt que nous avons contient du travail dans la branche `side`, que nous voulons copier dans `master`. Cela pourrait être fait avec un rebase (que nous avons déjà appris), mais voyons comment cherry-pick fonctionne."
+            ],
+            "afterMarkdowns": [
+              "Voilà ! Nous voulions les commits `C2` et `C4` et git les a fait apparaître juste sous nos jambes. Aussi simple que ça !"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Pour finir ce niveau, copiez simplement le travail désigné dans la branche master. Vous pouvez voir les commits que nous souhaitons avoir en regardant dans la fenêtre d'objectif.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "es_AR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Moviendo el trabajo por ahí",
+              "",
+              "Hasta ahora cubrimos lo básico de git -- commitear, branchear, y movernos por el árbol de commits. Estos conceptos alcanzan para aprovechar el 90% del poder de los repositorios de git y cubrir las necesidades principales de los desarrolladores.",
+              "",
+              "El 10% restante, sin embargo, puede ser bastante útil en flujos de trabajo complejos (o cuando te metiste en algún problema complicado). El próximo concepto que vamos a cubrir es el de \"mover el trabajo por ahí\" -- en otras palabras, una forma que tienen los desarrolladores de decir \"Quiero este trabajo allá y este otro allá\" de una manera precisa, elocuente y flexible.",
+              "",
+              "Puede parecer un montón, pero es un concepto bastante simple."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "El primer comando en esta serie se llama `git cherry-pick`. Tiene la siguiente forma:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Es una manera bastante directa de decir que querés copiar una serie de commits sobre tu ubicación actual (`HEAD`). Personalmente amo `cherry-pick` porque hay muy poca magia involucrada y es bastante simple de entender.",
+              "",
+              "¡Veamos una demo!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Acá tenemos un repositorio con algo de trabajo en la rama `side` que queremos copiar a `master`. Podríamos lograrlo con un rebase (y ya aprendimos cómo), pero veamos cómo se comporta cherry-pick."
+            ],
+            "afterMarkdowns": [
+              "¡Eso es todo! Queríamos los commits `C2` y `C4` y git los aplicó justo donde estábamos. ¡Tan simple como eso!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar este nivel, simplemente copiá algo de trabajo desde otras tres ramas a master. Podés ver qué commits queremos en la visualización del objetivo.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "pt_BR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Movendo trabalho por aí",
+              "",
+              "Por enquanto nós abordamos o básico do Git -- commitar, criar ramos, e mover-se pela árvore. Apenas esses conceitos já são suficientes para utilizar 90% do poder dos repositórios Git, e cobrem as principais necessidades dos desenvolvedores.",
+              "",
+              "Os 10% restantes, entretanto, podem ser extremamente úteis em fluxos de trabalho complexos (ou quando você estiver em uma enrascada). O próximo conceito que vamos abordar é \"movendo trabalho por aí\" -- em outras palavras, veremos as formas como o desenvolvedor pode dizer \"eu quero este trabalho aqui, e aquele ali\" de formas precisas, eloquentes e flexíveis.",
+              "",
+              "Isso pode parecer muito, mas os conceitos são simples."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "O primeiro comando desta série é o `git cherry-pick`. Ele é chamado da seguinte forma:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Trata-se de uma forma bastante direta de dizer que você gostaria de copiar uma série de commits abaixo do seu local atual (`HEAD`). Eu pessoalmente amo o  `cherry-pick` porque há muito pouca mágica envolvida e é fácil de entender o funcionamento.",
+              "",
+              "Vejamos uma demonstração!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Aqui está um repositório onde temos algum trabalho no ramo `side` que desejamos copiar para o `master`. Isso poderia ser obtido por meio de um rebase (que já aprendemos), mas vamos ver como o cherry-pick se sai."
+            ],
+            "afterMarkdowns": [
+              "É isso! Queríamos os commits `C2` e `C4` e o git os inseriu logo abaixo de nós. Simples assim!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar este nível, simplesmente copie algum trabalho dos outros três ramos para o master. Você pode ver quais commits queremos copiar na visualização do objetivo.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "zh_TW": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "移動 commit",
+              "",
+              "目前為止我們已經講了 git 的基礎，這些基礎包括 commit、branch 以及在 commit tree 中移動，只要有這些概念你就能發揮 git 90% 的功力，而且對於程式設計師來說，這樣就很夠了。",
+              "",
+              "而剩下的 10%，在很複雜的專案上面，是非常有用的（或者當你陷入困惑時），我們下一個要講的概念是 \"移動 commit\"，換句話說，當你會這個非常有彈性的招數之後，你就可以說\"我想要把這個 commit 放這裡，而那個 commit 放在那裡\"。",
+              "",
+              "這看起來很複雜，但其實它很簡單。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git cherry-pick",
+              "",
+              "我們要講的第一個指令叫作 `git cherry-pick`，它的用法如下：",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "當你想要複製幾個 commit 並且接在你目前的位置（`HEAD`）下面的時候，這會是一個非常直接的方式。我個人非常喜歡用 `cherry-pick`，因為它並不複雜，很容易就可以了解。",
+              "",
+              "讓我們來看一個例子！",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "這裡有一個 repo，在 `side` branch 中，我們有一些 commit 想要複製到 `master` branch 上，這可以透過一個 rebase 來完成（我們之前已經學到了），但是讓我們看看 `git cherry-pick` 怎麼做。"
+            ],
+            "afterMarkdowns": [
+              "就是那樣！我們複製了 `C2` 以及 `C4` 並且把它們放到我們的後面，很簡單吧！"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成這個關卡，只需要從三個 branch 複製幾個 commit 到 `master` 下面，你可以從視覺化的目標看到我們需要哪些 commit。",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "zh_CN": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 转移提交(commits)",
+              "",
+              "到现在我们已经学习了 Git 的基础命令 -- commit, branch, checkout. 这些概念实现了 Git 90% 的功能, 同样也满足了开发者的主要需求 ",
+              "",
+              "然而, 剩余的 10% 可能在处理复杂的工作流时(或者当你陷入困惑时), 非常的重要. 我们会在下一个概念中涉及'转移工作区', 换句话说, 这是开发者表达'我想要把这个工作放这里, 那个工作也放这里', 精确地说, 这是很灵活的方式    ",
+              "",
+              "看起来内容很多, 其实概念相当简单"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "本系列的第一个命令是 `git cherry-pick`, 命令形式为: ",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "这是一种很直接的推进方式 -- 如果你想将一些提交复制到你当前的位置 `HEAD` 下面, 我个人喜欢 `cherry-pick` 的原因是, 其概念非常简单 ",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "现在有一个仓库, 我们想将 `side` 分支下的工作复制到 `master` 分支, 我们可以通过 `rebase` 完成这一点(已经学过了哈), 但是这里我们想通过 `cherry-pick` 来完成."
+            ],
+            "afterMarkdowns": [
+              "这是它啦, 我们需要的是提交对象`C2` 和 `C4` ,所以 Git 将被它们抓取到当前分支下了. 就是这么简单!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "完成这节测试, 只需要简单的将分支的工作复制到 master.  如果想看我们所需要的提交对象, 你可以打开虚拟目标窗口 (`show goal`)",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "de_DE": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Inhalte verschieben",
+              "",
+              "Bis jetzt haben wir uns die Grundlagen von Git angeschaut -- comitten, verzweigen und sich im Commit-Baum bewegen. Nur damit lässt sich schon 90% der Macht von Git-Repositories nutzen und die meisten Anforderungen von Entwicklern erfüllen.",
+              "",
+              "Die übrigen 10% jedoch können in komplexeren Abläufen sehr hilfreich sein (oder wenn man sich in eine schwierige Lage manövriert hat). Das nächste was wir uns anschauen, ist, Inhalte durch den Commit-Baum zu schieben. Es gibt dem Entwickler die Möglichkeit in präziser, eloquenter Manier zu sagen \"Ich will diese Inhalte hier und diese dort haben\".",
+              "",
+              "Das klingt vielleicht nach einer Menge, aber es ist sehr einfach."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git cherry-pick",
+              "",
+              "Der erste Befehl in dieser Serie ist `git cherry-pick`. Er sieht so aus:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Er ist eine einfache Möglichkeit um auszudrücken, dass du eine Folge von Commits unter deinen aktuellen Checkout (also `HEAD`) hängen möchtest. Ich persönlich liebe `cherry-pick`, weil es wenig Magic enthält und einfach zu verstehen ist.",
+              "",
+              "Schauen wir's uns mal an.",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Hier haben wir ein Repository mit einigem Zeugs im Branch `side`, das wir in den Branch `master` kopieren wollen. Das könnten wir mit einem Rebase machen (wie bereits gesehen), aber schauen wir mal wie das mit `cherry-pick` geht."
+            ],
+            "afterMarkdowns": [
+              "Das war's! Wir wollten die commits `C2` und `C4` und Git hat die einfach unter unseren aktuellen Checkout kopiert. So einfach ist das."
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Um diesen Level zu schaffen musst du einfach nur einige Commits aus den drei gezeigten Branches in den `master` kopieren. Der Zielbaum zeigt dir, welche.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "ja": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## コードの移動",
+              "",
+              "今まででは、gitの基本をひたすら見てきました -- コミットしたりブランチを派生したり、そしてソースツリーの中の色々な場所に移動することなどです。これらの概念だけで、gitリポジトリの力を90%使いこなすことができ、開発者の主な需要を満たしています。",
+              "",
+              "しかし最後の10%はより複雑なワークフローやちょっとトラブった時にとても役にたちます。これから取り上げる次の課題は「作業内容の移動」 –- 詳しく言えば、「この作業はここに置き、その作業はそこに置きたい」と言う開発者のために、優しく具体的で正確にその方法をお教えしましょう。",
+              "",
+              "ちょっと複雑に聞こえるかもしれませんが、概念は簡単です。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "このシリーズの一つ目のコマンドは、`git cherry-pick`。このコマンドの使い方は、次の形になります:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "現在の位置(`HEAD`)の下に一連のコミットをコピーしたいという意を単純に表す方法です。分かりにくいところが少ないので、個人的に私がとても好きなコマンドです。",
+              "",
+              "デモを見ていきましょう!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "このリポジトリには、現在`side`ブランチから`master`にコピーしたいコードがあります。この前に学んだrebaseコマンドでも実現可能ですが、ここではcherry-pickの動作を見ていきましょう。"
+            ],
+            "afterMarkdowns": [
+              "これだけで終わりです！コミット`C2` と `C4`を取得したかったわけですが、gitが現在の位置の直下に落としてくれました。単純ですね！"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "このレベルをクリアするには、３つのブランチからmasterにコードをコピーしてください。どのコミットを取得するかについてはゴールのツリーをみてください。",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "ru_RU": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Поперемещаем изменения",
+              "",
+              "Итак, мы уже освоили основы Git: коммиты, ветки, перемещение по дереву изменений. Уже этих знаний достаточно, чтобы овладеть 90% мощью Git-репозиториев и покрыть нужды разработчиков.",
+              "",
+              "А оставшиеся 10% будут очень полезны при сложных workflow (или если ты попал в сложную ситуацию). Теперь речь пойдёт о перемещении изменений — возможности, позволяющей разработчику сказать \"Хочу, чтобы эти изменения были вот тут, а вот эти — вон там\" и получить точные, правильные результаты, не теряя при этом гибкости разработки.",
+              "",
+              "На первый взгляд запутанно, но на самом деле всё просто."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "Первая из таких команд - это `git cherry-pick`. Она выглядит вот так:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "Это очень простой и прямолинейный способ сказать, что ты хочешь копировать несколько коммитов на место, где сейчас находишься (`HEAD`). Мы обожаем `cherry-pick` за то, что в нём очень мало магии и его очень просто понять и применять.",
+              "",
+              "Посмотрим на демонстрацию.",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Вот репозиторий, где есть некие изменения в ветке `side`, которые мы хотим применить и в ветку `master`. Мы можем сделать это при помощи команды rebase, которую мы уже прошли, но давай посмотрим, как cherry-pick справится с этой задачей."
+            ],
+            "afterMarkdowns": [
+              "Вуаля! Мы хотели перенести коммиты `C2` и `C4`, Git дал нам их там, где они нужны. Всё просто!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Чтобы пройти этот уровень, просто скопируй изменения из этих трёх веток в мастер. Чтобы понять, какие коммиты копировать, посмотри на визуализацию уровня.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+  "ko": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 작업을 여기저기로 옮기기",
+              "",
+              "지금까지 우리는 git의 기초를 배웠습니다. -- 커밋을하고, 브랜치를 만들고, 소스 트리 여기저기를 돌아다녔습니다. 이런 개념들을 아는 것만으로도 git repository의 힘을 90%이상 사용하고 개발자들이 필요로하는 작업의 대부분을 할 수 있습니다.",
+              "",
+              "그 나머지 10% 기능이, 복잡한 작업(또는 작업중 막혔을때)중에 꽤 유용할 수 있습니다. 이제 배워 볼 다음 개념은 \"작업을 여기저로 올기기\" 다시 말해, 개발자들의 언어로 \"이 일은 여기에 저 일은 저기에 두고 싶어\" 정확하고 우아하고 유연하게.",
+              "",
+              "다소 과해 보일 수 있는데, 간단한 개념입니다."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git 체리-픽 (Cherry-pick)",
+              "",
+              "이 시리즈의 첫 명령어는 `git cherry-pick` 입니다. 다음 과 같은 형태로 사용합니다:",
+              "",
+              "* `git cherry-pick <Commit1> <Commit2> <...>`",
+              "",
+              "현재 위치(`HEAD`) 아래에 있는 일련의 커밋들에대한 복사본을 만들겠다는 것을 간단히 줄인 말입니다. 개인적으로 저는 `cherry-pick`을 아주 좋아합니다 왜냐하면 조금의 마법이 첨가되있고 이해하기 쉽기 때문입니다.",
+              "",
+              "데모를 확인해봅시다",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "여기 repository가 있습니다. `master`와 master로 복사하고 싶은 작업이 있는 브랜치 `side`가 있습니다. 이것은 rebase를 통해서 할 수 있습니다(이미 배운), 하지만 체리-픽이 이 작업을 어떻게 수행하는지 확인해 봅시다."
+            ],
+            "afterMarkdowns": [
+              "됬습니다! 우리는 `C2`와 `C4` 커밋을 원했고 git이 우리가 원하는 곳 바로 밑에 톡 떨어뜨려 줬습니다. 아주 간단하죠!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "이 레벨을 통과하기 위해서는 몇개의 작업을 세개의 브랜치들에서 master로 복사해와야합니다. 어떤 커밋들이 필요한지는 goal을 보고 확인하면 됩니다.",
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    "uk": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Переміщуємо зміни",
+              "",
+              "Поки що ми розглядали основи git -- як працювати з комітами та гілками й переміщення по дереву комітів. Цього вже достатньо щоб використовувати 90% фунцкій гіт та мати змогу ефективно працювати з гіт як розробник.",
+              "",
+              "Решта 10%, тим не менш, можуть бути надзвичайно корисними при роботі зі складними робочими процесами (workflow), чи коли ти чи ще хтось щось зробили не так і ти хочеш це виправити. Наступна концепція з якою ми познайомимось це \"перенесення змін\" -- іншими словами, це можливість розробника переміщувати коміти між гілками в простий та зручний спосіб.",
+              "",
+              "Це може видаватися складним, але насправді це дуже проста концепція."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Cherry-pick",
+              "",
+              "Перша команда в цій серії називається `git cherry-pick`. Вона має наступну форму:",
+              "",
+              "* `git cherry-pick <Коміт1> <Коміт2> <...>`",
+              "",
+              "Це надзвичайно простий спосіб вказати гіту що потрібно скопіювати серію комітів до поточного розташування (`HEAD`). Персонально я обожнюю `cherry-pick` за його прямолінійнсть, це дуже зрозуміла концепція що не використовує прихованої магії",
+              "",
+              "Давайте подивимось на практиці!",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Ми бачимо репозиторій де є певні зміни в гілці `side` які ми хочемо скопіювати в  `master`. Для цього можна використати rebase (який ми вже вивчили), але подивимось як з цим впорається cherry-pick."
+            ],
+            "afterMarkdowns": [
+              "Оба-на! Ми хотіли коміти `C2` та `C4` і git додав їх до поточного розташування. Просто й доступно!"
+            ],
+            "command": "git cherry-pick C2 C4",
+            "beforeCommand": "git checkout -b side; git commit; git commit; git commit; git checkout master; git commit;"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Щоб пройти це рівень, просто скопіюй якісь зміни з трьох гілок показаних на діаграмі в master. В візуалізації видно які коміти потрібно скопіювати.",
+              ""
+            ]
+          }
+        }
+      ]
     }
   }
 };
-
 });
 require("/src/levels/rampup/cherryPick.js");
 
@@ -40374,17 +42285,37 @@ require("/src/levels/rampup/detachedHead.js");
 
 require.define("/src/levels/rampup/interactiveRebase.js",function(require,module,exports,__dirname,__filename,process,global){exports.level = {
   "goalTreeString": "%7B%22branches%22%3A%7B%22master%22%3A%7B%22target%22%3A%22C4%27%22%2C%22id%22%3A%22master%22%7D%2C%22overHere%22%3A%7B%22target%22%3A%22C1%22%2C%22id%22%3A%22overHere%22%7D%7D%2C%22commits%22%3A%7B%22C0%22%3A%7B%22parents%22%3A%5B%5D%2C%22id%22%3A%22C0%22%2C%22rootCommit%22%3Atrue%7D%2C%22C1%22%3A%7B%22parents%22%3A%5B%22C0%22%5D%2C%22id%22%3A%22C1%22%7D%2C%22C2%22%3A%7B%22parents%22%3A%5B%22C1%22%5D%2C%22id%22%3A%22C2%22%7D%2C%22C3%22%3A%7B%22parents%22%3A%5B%22C2%22%5D%2C%22id%22%3A%22C3%22%7D%2C%22C4%22%3A%7B%22parents%22%3A%5B%22C3%22%5D%2C%22id%22%3A%22C4%22%7D%2C%22C5%22%3A%7B%22parents%22%3A%5B%22C4%22%5D%2C%22id%22%3A%22C5%22%7D%2C%22C3%27%22%3A%7B%22parents%22%3A%5B%22C1%22%5D%2C%22id%22%3A%22C3%27%22%7D%2C%22C5%27%22%3A%7B%22parents%22%3A%5B%22C3%27%22%5D%2C%22id%22%3A%22C5%27%22%7D%2C%22C4%27%22%3A%7B%22parents%22%3A%5B%22C5%27%22%5D%2C%22id%22%3A%22C4%27%22%7D%7D%2C%22HEAD%22%3A%7B%22target%22%3A%22master%22%2C%22id%22%3A%22HEAD%22%7D%7D",
-  "solutionCommand": "git rebase -i overHere",
+  "solutionCommand": "git rebase -i overHere --solution-ordering C3,C5,C4",
   "compareOnlyMasterHashAgnostic": true,
   "disabledMap": {
     "git cherry-pick": true
   },
   "startTree": "{\"branches\":{\"master\":{\"target\":\"C5\",\"id\":\"master\"},\"overHere\":{\"target\":\"C1\",\"id\":\"overHere\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"},\"C2\":{\"parents\":[\"C1\"],\"id\":\"C2\"},\"C3\":{\"parents\":[\"C2\"],\"id\":\"C3\"},\"C4\":{\"parents\":[\"C3\"],\"id\":\"C4\"},\"C5\":{\"parents\":[\"C4\"],\"id\":\"C5\"}},\"HEAD\":{\"target\":\"master\",\"id\":\"HEAD\"}}",
   "hint": {
-    "en_US": "you can use either branches or relative refs (HEAD~) to specify the rebase target"
+    "en_US": "you can use either branches or relative refs (HEAD~) to specify the rebase target",
+    "es_AR": "podés usar tanto ramas como referencias relativas (HEAD~) para especificar el objetivo del rebase",
+    "pt_BR": "Você pode usar ou ramos ou referências relativas (HEAD~) para especificar o alvo do rebase",
+    "de_DE": "Du kannst entweder Branches oder relative Ref-Angaben (z.B. HEAD~) benutzen, um das Ziel des Rebase anzugeben.",
+    "fr_FR": "Vous pouvez utiliser soit les branches, soit les références relatives (HEAD~) pour spéficier la cible à rebaser",
+    "zh_CN": "你可以使用 branch 或者是相对位置（HEAD~）來指定 rebase 的目标",
+    "zh_TW": "你可以指定 branch 或者是相對位置（HEAD~）來表示 rebase 的目標",
+    "ru_RU": "Можно использовать либо ветки, либо относительные ссылки (HEAD~), чтобы указать цель для Rebase",
+    "ja"   : "リベースする対象の指定には、ブランチ名や相対リファレンス(HEAD~)が使えます",
+    "ko"   : "리베이스할 타겟으로 브랜치나 상대 참조(HEAD~)를 사용할 수 있습니다",
+    "uk"   : "ти можеш використовувати гілки чи відносні посилання (HEAD~) щоб вказувати ціль для rebase"
   },
   "name": {
-    "en_US": "Interactive Rebase Intro"
+    "en_US": "Interactive Rebase Intro",
+    "es_AR": "Introducción al rebase interactivo",
+    "pt_BR": "Introdução ao rebase interativo",
+    "de_DE": "Einführung Interactive Rebase",
+    "ja"   : "インタラクティブrebase入門",
+    "fr_FR": "Introduction à rebase",
+    "zh_CN": "Rebase 交互命令介绍 ",
+    "zh_TW": "介紹互動式的 rebase",
+    "ru_RU": "Введение в интерактивный Rebase",
+    "ko"   : "인터랙티브 리베이스 소개",
+    "uk"   : "Знайомство з інтерактивним rebase"
   },
   "startDialog": {
     "en_US": {
@@ -40423,9 +42354,9 @@ require.define("/src/levels/rampup/interactiveRebase.js",function(require,module
               "",
               "* You can reorder commits simply by changing their order in the UI (in our window this means dragging and dropping with the mouse).",
               "* You can choose to completely omit some commits. This is designated by `pick` -- toggling `pick` off means you want to drop the commit.",
-              "* Lastly, you can squash commits. Unfortunately our levels don't support this for a few logistical reasons, so I\"ll skip over the details of this. Long story short though -- it allows you to combine commits.",
+              "* Lastly, you can squash commits. Unfortunately our levels don't support this for a few logistical reasons, so I'll skip over the details of this. Long story short, though -- it allows you to combine commits.",
               "",
-              "Great! Lets see an example"
+              "Great! Let's see an example."
             ]
           }
         },
@@ -40451,10 +42382,659 @@ require.define("/src/levels/rampup/interactiveRebase.js",function(require,module
           }
         }
       ]
+    },
+    "fr_FR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Interactive Rebase",
+              "",
+              "Git cherry-pick est pratique quand vous savez exactement quels commits vous voulez (_et_ que vous connaissez leurs identifiants) -- il est difficile de battre la simplicité qu'il procure.",
+              "",
+              "Mais que faire quand vous ne connaissez pas les identifiants des commits ? Heureusement git a pensé à vous dans pour ce cas-là ! Nous pouvons utiliser un rebase interactif pour cela -- c'est la meilleure façon de reconsidérer une série de commits que vous vous apprêtez à rebaser.",
+              "",
+              "Allons un peu plus dans les détails ..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Tout rebase interactif signifie utiliser la commande `rebase` avec l'option `-i`.",
+              "",
+              "Si vous mettez cette option, git va ouvrir une interface graphique pour vous montrer quels commits vont être copiés en dessous de la cible sur laquelle vous rebasez. Elle vous montre aussi les identifiants et commentaires des commits, ce qui est pratique pour s'orienter parmi les commits.",
+              "",
+              "Pour le \"vrai\" git, l'interface graphique correspond en fait à ouvrir un fichier dans un éditeur de texte comme `vim`. Pour notre exemple, j'ai construit une petite fenêtre de dialogue qui se comporte de la même façon."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Quand le rebase interactif s'ouvre, vous avez la possibilité de faire 3 choses :",
+              "",
+              "* Vous pouvez réarranger les commits simplement en changeant leur ordre dans l'interface graphique (dans notre fenêtre de dialogue, cela signifie déplacer les objets dedans avec la souris -- drag and drop).",
+              "* Vous pouvez omettre certains commits. Cela est désigné par `pick` : cliquer sur `pick` désélectionne/resélectionne le commit.",
+              "* Enfin, vous pouvez écraser des commits. Malheureusement notre niveau ne supporte pas cette option, nous allons donc sauter les détails concernant cette possibilité. Pour faire court, cela vous permet de mélanger des commits.",
+              "",
+              "Super ! Voyons un exemple."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Quand vous activez le bouton, une fenêtre de rebase interactif va s'ouvrir. Reordonnez quelques commits (ou supprimez-en certains) et regardez le résultat !"
+            ],
+            "afterMarkdowns": [
+              "Boum ! Git a copié les commits de la même manière que vous l'aviez spécifié."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Pour finir ce niveau, faites un rebase interactif et atteignez l'ordre indiqué dans le fenêtre d'objectif. Souvenez-vous que vous pouvez toujours exécuter les commandes `undo` ou `reset` pour réparer vos erreurs :D"
+            ]
+          }
+        }
+      ]
+    },
+    "zh_TW": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git interactive rebase",
+              "",
+              "當你知道你要複製哪些 commit（而且你也知道他們所對應的 hash 值），那麼 `git cherry-pick`  很適合你。",
+              "",
+              "但是如果你不知道你要的是哪些 commit 呢？ 很幸運的是，git 也有考慮到這個問題喔！我們可以用互動式的 rebase 來做到，當你想要檢查你想要的 commit 的時候，這會是最好的方法。",
+              "",
+              "讓我們來看一下這些細節..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "互動式的 rebase 相當於使用 rebase 這個指令的時候，後面加上一個 `-i` 的選項。",
+              "",
+              "如果你有包含了這個選項，git 就會打開一個 UI，讓你知道說有哪些 commit 會被複製下來，它也會告訴你它們的 hash 值以及可以讓你知道它們是什麼的訊息。",
+              "",
+              "在\"實務上\"，UI 會利用一個編輯器（例如 vim）打開一個檔案，對於我們來說，我已經設計了一個有同樣功能的對話視窗。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "當互動式的 rebase 的對話視窗打開之後，你就可以做到三件事情：",
+              "",
+              "* 你可以藉由改變這些 commit 在 UI 的位置（在我們的視窗中，可以透過滑鼠去拖拉），來重新排序它們的順序。",
+              "* 你可以選擇完全忽略掉某些 commit，可以用滑鼠按一下，使它變暗，就表示你要忽略掉該 commit。",
+              "* 最後, 你可以把 commit 合併在一起，但基於某些理由，在我們的關卡裡面並沒有這個功能。",
+              "",
+              "太棒了！讓我們來看一個例子！"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "當你按下按鈕的時候，一個互動式的 rebase 的視窗就會跳出來，重新排序一些 commit（大膽忽略掉某些 commit），然後看一下結果吧！"
+            ],
+            "afterMarkdowns": [
+              "看吧！ git 根據你所選擇的 commit，把它們複製了下來。"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成這個關卡，使用互動式的 rebase，並且完成視覺化目標所表示 commit 的順序，記住！你可以經常使用 `undo` 或者 `reset` 來修正你的一些錯誤:D"
+            ]
+          }
+        }
+      ]
+    },
+   "zh_CN": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## 交互式的 Rebase",
+              "",
+              "如果你知道你所需要的提交对象(相应的 hash), 那用 Git cherry-pick 就非常方便了 -- 很难有简单的方式了",
+              "",
+              "但是如果你不清楚你想要的提交对象的 hash 呢? 幸好 Git 帮你想到了这一点, 我们可以利用交互 rebase -- 如果你想衍合一系列的提交, 这就是最方便的方法了",
+              "",
+              "让我们看看细节.."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "交互式 rebase 指的是 rebase 后跟一个参数: `-i`",
+              "",
+              "如果你包含了这个选项, Git 会开启一个 UI 并 展示出将要被复制到目标的提交对象, 它也会显示它们的提交 hash 和信息",
+              "",
+              "真实的 Git, UI 窗口指的是在类似于 Vim 的文本编辑器中打开一个文件. 考虑到我们的目标, 我建立了一个小型的会话窗口以完成相同的事儿."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "当 rebase 会话窗口打开时, 你能做3件事:",
+              "",
+              "* 你可以在 UI 中做 提交对象的排序(在我们的窗口中, 这意味着你可以拖放完成这点)",
+              "* 你可以忽略某些提交 -- pick 会变暗",
+              "* 最后, 你可以合并提交. 遗憾的是我们的课程不支持此功能.",
+              "",
+              "好! 看看例子"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "当你点这个按钮时, 一个交互式的 rebase 窗口就会出现. 对提交对象做个排序, 再看看结果"
+            ],
+            "afterMarkdowns": [
+              "按照你指定的方式, Git 克隆了这些提交"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "要完成本节, 做一个交互式的 rebase , 实现虚拟目标窗口中提示的提交顺序. 记住,  你随时都可以用 `undo`, `reset` 修复你的错误"
+            ]
+          }
+        }
+      ]
+    },
+    "es_AR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## git rebase interactivo",
+              "",
+              "git cherry-pick es genial cuando sabés cuáles commits querés (_y_ sabés sus hashes) -- es dificil superar la simpleza que provee.",
+              "",
+              "Pero ¿qué pasa cuando no sabés qué commits querés? Por suerte ¡git te cubre en esta situación, también! Podemos usar el rebase interactivo para esto -- es la mejor manera de revisar una serie de commits que estás por rebasear.",
+              "",
+              "Entremos en los detalles..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Todo rebase interactivo significa usar el comando `rebase` con la opción `-i`.",
+              "",
+              "Si incluís esta opción, git abrirá una UI para mostrarte qué commits están a punto de ser copiados sobre el objetivo del rebase. También muestra sus hashes y mensajes, que ayuda mucho para saber qué es cada commit.",
+              "",
+              "Para el git \"de verdad\", la UI signfica abrir un archivo en un editor de textos como `vim`. Para nuestro propósito, hice una pequeña interfaz que se comporta de ese mismo modo."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Cuando el diálogo de rebase interactivo se abre, tenés la capacidad de hacer 3 cosas:",
+              "",
+              "* Podés reordenar los commits con solamente cambiar su orden en la UI (en nuestra ventana, eso significa hacer drag & drop con el mouse).",
+              "* Podés elegir ignorar completamente algunos commits. Esto se designa con `pick` -- no hacerle `pick` a algún commit significa que querés ignorarlo.",
+              "* Finalmente, podés _squashear_ commits. Desafortunadamente, nuestros niveles no soportan esto por cuestiones logísticas, por lo que voy a ahorrarte los detalles. Haciéndola corta, te permite combinar varios commits en uno solo.",
+              "",
+              "¡Genial! Veamos un ejemplo."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Cuando apretes el botón, va a aparecer una ventana de rebase interactivo. Reordená los commits (sentite libre de ignorar alguno, también) ¡y mirá el resultado!"
+            ],
+            "afterMarkdowns": [
+              "¡Boom! Git copió los commits exactamente de la misma manera que lo especificaste en la UI"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para completar el nivel, hacé un rebase interactivo y alcanzá el orden que se muestra en la visualización objetivo. Acordate que siempre podés hacer `undo` y `reset` para arreglar errores :D"
+            ]
+          }
+        }
+      ]
+    },
+    "pt_BR": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Rebase Interativo do Git",
+              "",
+              "O cherry-pick é ótimo quando você sabe de antemão quais commits você quer (_e_ você sabe os hashes correspondentes) -- é difícil bater a simplicidade que ele oferece.",
+              "",
+              "Mas e quando você não sabe quais commits você quer? Felizmente o git pode te ajudar nesta situação também! Podemos usar o rebase interativo para isso -- trata-se da melhor forma de rever uma série de commits sobre os quais você está prestes a fazer um rebase.",
+              "",
+              "Mergulhemos nos detalhes..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "O rebase interativo é simplesmente o comando `rebase` com a opção `-i`.",
+              "",
+              "Se você incluir essa opção, o git abrirá uma interface para mostrar quais commits estão prestes a serem copiados abaixo do alvo do rebase. Ele também mostra os hashes e as mensagens dos commits, o que é ótimo para ter noção do que é o que.",
+              "",
+              "No git \"de verdade\", a interface nada mais é que um arquivo aberto em um editor de texto (por exemplo o `vim`). Para os nossos propósitos, eu montei uma pequena janela que se comporta da mesma forma."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Quando a janela de rebase interativo abrir, você pode fazer 3 coisas diferentes:",
+              "",
+              "* Você pode reordenar os commits simplesmente mudando sua ordem na interface (na nossa janela isso significa arrastar e soltar com o mouse).",
+              "* Você pode escolher simplesmente omitir alguns commits. Para isso, clique no botão `pick` -- deixar o `pick` desligado significa que você quer descartar o commit.",
+              "* Por fim, você pode \"esmagar\" (fazer squash) nos commits. Infelizmente, nosso tutorial não será capaz de cobrir essa funcionalidade por alguns motivos logísticos, então vamos pular os detalhes disto. Em resumo, no entanto, o squash permite que você combine commits.",
+              "",
+              "Ótimo! Vejamos um exemplo."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Quando você clicar o botão, uma janela de rebase interativo se abrirá. Reordene alguns commits da forma como você preferir (ou sinta-se livre para desmarcar o `pick` de alguns) e veja o resultado!"
+            ],
+            "afterMarkdowns": [
+              "Boom! O Git copiou alguns commits exatamente da mesma forma que você os especificou na janela"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Para finalizar este nível, faça um rebase interativo e obtenha a ordem mostrada na visualização do objetivo. Lembre-se que você pode usar os comandos `undo` ou `reset` para corrigir erros :D"
+            ]
+          }
+        }
+      ]
+    },
+    "de_DE": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Interaktiver Rebase",
+              "",
+              "Cherry-pick ist großartig wenn du genau weißt, welche Commits du willst (_und_ ihre jeweiligen Hashes kennst) -- es ist dann schwer an Einfachheit zu überbieten.",
+              "",
+              "Aber wie sieht es aus, wenn du die Commits nicht genau kennst, die du brauchst? Zum Glück bietet Git auch dafür eine Lösung an. Das können wir mit interaktivem Rebase machen -- die beste Art sich eine Serie von Commits in einem Rebase genau anzusehen.",
+              "",
+              "Schauen wir uns die Details an ..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Interaktives Rebase bedeutet einfach nur, dass man dem `rebase` Befehl die Option `-i` hinzufügt.",
+              "",
+              "Wenn du das machst, zeigt Git dir jeden einzelnen Commit, der durch den Rebase kopiert werden würde. Es zeigt dir die Hashes und Kommentare, was gut ist um einen Überblick zu bekommen.",
+              "",
+              "In echtem Git besteht dieser Dialog daraus, die Commits in einem Text-Editor angezeigt zu bekommen. Für unsere Zwecke hab ich ein kleines Dialog-Fenster gebaut, dass sich ähnlich verhält."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Wenn sich der Dialog für den interaktiven Rebase öffnet, kannst du drei Dinge tun:",
+              "",
+              "* Du kannst die Reihenfolge der Commits durch Ziehen und Ablegen ändern.",
+              "* Du kannst Git sagen, einen Commit beim Rebase zu ignorieren -- im Dialog durch die Schaltfläche `pick` dargestellt.",
+              "* Außerdem kannst du Commit zusammenfassen (squash). Leider wird das hier nicht unterstützt, aber in echtem Git fasst es Commits zu einem zusammen.",
+              "",
+              "Super! Schauen wir uns ein Beispiel an."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Wenn du die Schaltfläche anklickst wird sich der Rebase-Dialog öffnen. Veränder die Reihenfolge der Commits oder klick bei einigen auf `pick` und schau dir das Ergebnis an."
+            ],
+            "afterMarkdowns": [
+              "Bämm! Git hat die Commits genau so kopiert, wie du es ausgewählt hast."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Um dieses Level zu schaffen mach einen interaktiven Rebase, um genau die Reihenfolge zu erzeugen die im Ziel-Baum angezeigt wird. Denk daran, dass du jederzeit mit `undo` oder `reset` Fehler rückgängig machen kannst. :D"
+            ]
+          }
+        }
+      ]
+    },
+    "ja": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git インタラクティブrebase",
+              "",
+              "どのコミットを操りたいか（そしてそれを指定するハッシュ）がわかる時に`git cherry-pick`はとても便利で、その簡単さはとてもありがたいです。 ",
+              "",
+              "しかし、どのコミットを操りたいかがわからない時はどうでしょう？ありがたいことに、そんな時にぴったりのコマンドがgitに備わっています。このためにgitのインタラクティブrebaseを使えます。rebaseしたい一連のコミットを一括で見るベストな方法です。",
+              "",
+              "具体的に見てみましょう..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "インタラクティブrebaseとは単に、`rebase`コマンドに`-i`オプションを合わせて使うことです。",
+              "",
+              "このオプションをつければ、gitがインタフェースを開き、どのコミットがrebase対象の下にコピーされるかを確認できます。それらのコミットのハッシュやメッセージも表示され、rebaseの概要を一眼で見るのに便利です。",
+              "",
+              "\"ホンモノ\"のgitでは、その「インターフェース」とは`vim`などのテキストエディタの中でファイルが開くだけです。ここでコンセプトを見せるために同じような動作をする小さなダイアログウィンドウを作りました。"
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "インタラクティブrebaseダイアログが開くと、３つの操作から選べます:",
+              "",
+              "* UIウィンドウのなかで順番を調整するだけでコミットの順番を変えられます（こちらのダイアログでは、マウスでドラッグアンドドロップで操作します）。",
+              "* 特定のコミットを丸ごと除くこともできます。除きたいコミットを指定するには`pick`をオフにします。",
+              "* 最後に、コミットを組み合わせられます。技術的に制限があり再現できないのでその詳細な説明を省きますが、短く言いますと、複数のコミットを一つにまとめることができる機能です。",
+              "",
+              "さて、例を見てみましょう。"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "ボタンを押せば、インタラクティブrebaseウィンドウが現れます。コミットの順番を変更したり、`pick`を外したりしてみて、その結果を見てみましょう！"
+            ],
+            "afterMarkdowns": [
+              "よっしゃー。gitがUIで指定されたようにコミットをコピーしました！"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "このレベルをクリアするにはインタラクティブrebaseを実行し、ゴールのビジュアライズに表示されている順番を実現しましょう。ミスがあれば`undo`や`reset`で修正できるのをお忘れなく。"
+            ]
+          }
+        }
+      ]
+    },
+    "ru_RU": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git Interactive Rebase",
+              "",
+              "Git cherry-pick прекрасен, когда точно известно, какие коммиты нужны (и известны их точные хеши)",
+              "",
+              "Но как быть в случае, когда точно не известно какие коммиты нужны? К счастью, Git позаботился о таких ситуациях! Можно использовать интерактивный rebase для этого - лучший способ отобрать набор коммитов для rebase.",
+              "",
+              "Углубимся в детали."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Всё, что нужно для интерактивного rebase - это опция `-i`",
+              "",
+              "Если добавить эту опцию, Git откроет интерфейс просмотра того, какие коммиты готовы к копированию на цель rebase (target). Также показываются хеши коммитов и комментарии к ним, так что можно легко понять что к чему.",
+              "",
+              "Для \"реального\" Git, этот интерфейс означает просто открытие файла в редакторе типа vim. Для этой обучалки, я сделал небольшое диалоговое окно, которое по сути делает то же, что и редактор."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "После открытия окна интерактивного rebase есть три варианта для каждого коммита:",
+              "",
+              "* Можно сменить положение коммита по порядку, переставив строчку с ним в редакторе (у нас в окошке строку с коммитом можно перенести просто мышкой).",
+              "* Можно \"выкинуть\" коммит из ребейза. Для этого есть `pick` - переключение его означает, что нужно выкинуть коммит.",
+              "* Наконец, можно соединить коммиты. В этом уровне игры у нас не реализована эта возможность, но, вкратце, при помощи этой функции можно объединять изменения двух коммитов.",
+              "",
+              "Ну что ж, посмотрим на примеры!"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "После нажатия на эту кнопку появится окно интерактивного rebase. Переставь несколько коммитов (или удали кое-какие) и посмотри, что получится в итоге!"
+            ],
+            "afterMarkdowns": [
+              "Бах! Git скопировал коммиты в точности так, как было указано через интерфейс!"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Чтобы пройти этот уровень, переставь коммиты при помощи интерактивного rebase в таком порядке, как указано на визуализации. На всякий случай, помни, что всегда можно исправить ошибку, вызвав команду undo или reset."
+            ]
+          }
+        }
+      ]
+    },
+  "ko": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Git 인터렉티브 리베이스(Interactive Rebase)",
+              "",
+              "Git 체리-픽은 여러분이 원하는 커밋이 무엇인지 알때(각각의 해시값도) 아주 유용합니다 -- 체리-픽이 제공하는 간단함은 아주 매력적입니다.",
+              "",
+              "하지만 원하는 커밋을 모르는 상황에는 어쩌죠? 고맙게도 git은 이런상황에 대한 대안이 있습니다. 우리는 이럴 때 인터렉티브 리베이스를 사용하면됩니다 -- 리베이스할 일련의 커밋들을 검토할 수 있는 가장 좋은 방법입니다.",
+              "",
+              "자세히 알아보죠..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "인터렉티브 리베이스가 의미하는 뜻은 `rebase` 명령어를 사용할 때 `-i` 옵션을 같이 사용한다는 것입니다.",
+              "",
+              "이 옵션을 추가하면, git은 리베이스의 목적지가 되는 곳 아래에 복사될 커밋들을 보여주는 UI를 띄울것 입니다. 각 커밋을 구분할 수 있는 각각의 해시들과 메시지도 보여줍니다.",
+              "",
+              "\"실제\"git 에서는 UI창을 띄우는것 대신에 `vim`과 같은 텍스트 편집기에서 파일을 엽니다. 저희는 배우는것이 목적이기에 같은 역할을 하는 작은 대화창을 만들어서 대신했습니다."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "인터렉티브 리베이스 대화창이 열리면, 3가지를 할 수 있습니다:",
+              "",
+              "* 적용할 커밋들의 순서를 UI를 통해 바꿀수 있습니다(여기서는 마우스 드래그앤 드롭으로 가능합니다)",
+              "* 원하지 않는 커밋들을 뺄 수 있습니다. 이것은 `pick`을 이용해 지정할 수 있습니다(여기서는 `pick`토글 버튼을 끄는것으로 가능합니다)",
+              "* 마지막으로, 커밋을 스쿼시(squash)할 수 있습니다. 불행히도 저희 레벨은 몇개의 논리적 문제들 때문에 지원을 하지 않습니다. 이거에 대해서는 넘어가겠습니다. 요약하자면 커밋을 합칠 수 있습니다",
+              "",
+              "자! 예시를 확인해 봅시다."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "버튼을 누르면 인터렉티브 리베이스 대화창이 뜰것 입니다. 커밋들의 순서를 바꿔보고(커밋을 빼 봐도 됩니다) 결과를 확인해봅시다!"
+            ],
+            "afterMarkdowns": [
+              "Boom! Git이 UI를 통해 명시한 그대로 커밋들을 복사했습니다."
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "이번 레벨을 통과하기 위해서 goal에 나타난 순서대로 만들기 위해 인터렉티브 리베이스를 사용해봅시다. `undo`와 `reset`을 통해 했던 실수들은 되돌릴 수 있습니다 :D"
+            ]
+          }
+        }
+      ]
+    },
+    "uk": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Інтерактивний Rebase",
+              "",
+              "Git cherry-pick зручно користуватись коли ти знаєш які коміти тобі потрібні (_і_ ти знаєш їхні хеші) -- важко вигадати щось простіше.",
+              "",
+              "Але що робити в ситуації коли ти не знаєш які коміти потрібні? На щастя git може впоратись і з цим! Для цього випадку використовують інтерактивний rebase -- це найкращий спосіб перевірити серію комітів які потрібно заребейсити.",
+              "",
+              "Розглянемо це детальніше..."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Інтерактивний rebase це насправді команда  `rebase` з опцією `-i`.",
+              "",
+              "Якщо додати цю опцію, git відкриє діалог в якому покаже які коміти будуть скопійовані до кінцевого призначення. Він також покаже хеші комітів та їхні повідомлення, що допоможе розібратися що й до чого.",
+              "",
+              "В \"справжньому\" git, замість UI вікна відкриється файл в сконфігурованому текстовому редакторі, можливо `vim`. Для цього туторіалу я створив невеличке діалогове вікно що поводиться приблизно так само."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Коли відкриється вікно інтерактивного rebase ти можеш зробити три речі:",
+              "",
+              "* Ти можеш переставити коміти між собою просто змінивши їх порядок в діалозі (в нашому вікні ти зможеш перетягнути їх мишкою).",
+              "* Ти можеш повністю пропустити якісь коміти. В туторіалі потрібно вимкнути опцію `pick`, але в справжньому гіт потрібно просто видалити відповідний рядок.",
+              "* Також можна розчавити (squash) якісь коміти. На жаль наш туторіал не підтримує цю фічу (так як ми не підтримуємо роботу з файлами), але це дуже зручна опція в справжньому гіт. За її допомогою можна декілька різніх комітів об’єднати в один",
+              "",
+              "Чудово! Давайте розберемо це на прикладі"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Коли ти натиснеш кнопку відкриється вікно інтерактивного rebase. Перестав якісь коміти (можеш пропустити якісь якщо хочеш) і подивись що вийде!"
+            ],
+            "afterMarkdowns": [
+              "Ка-бум! Git cкопіював коміти відповідно до того що було вказано в UI"
+            ],
+            "command": "git rebase -i HEAD~4 --aboveAll",
+            "beforeCommand": "git commit; git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Щоб пройти цей рівень за допомогою інтерактивного rebase впорядкуй коміти як показано на візуалізації. Пам’ятай що ти завжди можеш використати `undo` чи `reset` щоб виправити помилку :D"
+            ]
+          }
+        }
+      ]
     }
   }
 };
-
 });
 require("/src/levels/rampup/interactiveRebase.js");
 
